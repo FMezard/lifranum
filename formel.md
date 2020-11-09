@@ -1,0 +1,15 @@
+Haiku
+haibun
+pantoun
+tanka
+senryu
+haiga
+micropoetry
+micropoesie
+micronouvelle
+nanofiction
+slampoesie
+lipogramme
+ironème
+acrostiche
+afforisme

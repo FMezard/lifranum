@@ -1,0 +1,4 @@
+6mots
+6words
+5lines
+octosyllabes

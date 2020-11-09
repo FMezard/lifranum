@@ -1,0 +1,21 @@
+{
+          "id": "66e1f091-95ab-4cd7-95f4-96a6c789b1fa",
+          "parentId": "2d9f325f-5e5e-48be-8960-efef75efb674",
+          "text": {
+            "caption": "1mot1haiku",
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "decoration": "none",
+              "size": 7,
+              "color": "#000000"
+            }
+          },
+          "offset": {
+            "x": 211,
+            "y": -10
+          },
+          "foldChildren": false,
+          "branchColor": "#000000",
+          "children": []
+        }

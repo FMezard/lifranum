@@ -1,0 +1,11 @@
+nanowrimo
+nahaiwrimo
+Writober
+Writober2020
+covidpoem
+covidpoeme
+sampoesie
+covidpoesie
+1mot1haïku
+S3Micronouvelles 
+S8Micronouvelles

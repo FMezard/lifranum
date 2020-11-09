@@ -1,0 +1,36 @@
+{
+  "id": "eaf1bcab-a68b-4f59-95da-49377ebe6f59",
+  "title": "title",
+  "mindmap": {
+    "root": {
+      "id": "d56e09d5-f75e-4cbc-8006-0baafbb5fe45",
+      "parentId": null,
+      "text": {
+        "caption": "root",
+        "font": {
+          "style": "normal",
+          "weight": "normal",
+          "decoration": "none",
+          "size": 7,
+          "color": "#000000"
+        }
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "foldChildren": false,
+      "branchColor": "#000000",
+      "children": []
+    }
+  },
+  "dates": {
+    "created": 1601969708948,
+    "modified": 1601969726863
+  },
+  "dimensions": {
+    "x": 4000,
+    "y": 2000
+  },
+  "autosave": false
+}
