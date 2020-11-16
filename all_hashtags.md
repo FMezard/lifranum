@@ -28,8 +28,6 @@ writing
 mesincipitimaginaire
 scribaland
 poetry
-word
-mots
 afforisme
 acrostiche
 ironeme
