@@ -1,36 +1,35 @@
 from collections import Counter
 import twitter
 import json
-from datetime import datetime
-import networkx as nx
-import matplotlib.pyplot as plt
 import csv
-
+import os
 
 # TODO : Mettre des variables d'env
 # TODO : Virer les # en double
 # TODO : Récupérer les auteurs qui twittent avec les # récupérés
 # TODO : POur les auteurices : avoir à chaque fois un tuple pour savoir cb de fois ielles apparaissent ?
-api = twitter.Api(consumer_key='H0Fh0LpfVI9pGH1LGb91Hv56R',
-                  consumer_secret='osXrTW7IWM9ObxCxt1S6Ncae37SmSzvMKNO1QgzeVawxIp4Oqi',
-                  access_token_key='3225285533-HbE2ptwZrjubzgohmBsSirl62ZeyiD38iZ7i3fE',
-                  access_token_secret='iGvuTp7aNpfSjKzWm9z55G5BLFnKIa5jW4LDPyDy2fWx6',
+api = twitter.Api(consumer_key=os.getenv('CONSUMER_KEY'),
+                  consumer_secret=os.getenv('CONSUMER_SECRET'),
+                  access_token_key=os.getenv('ACCESS_TOKEN_KEY'),
+                  access_token_secret=os.getenv('ACCESS_TOKEN_SECRET'),
                   sleep_on_rate_limit=True
                   )
 
 
-def get_authors_using(hashtag, mots_cles=None):
-    # on veut pouvoir faire ou un simple # ou des listes complexes avec # et mots-clés de Christian
-    # https://twitter.com/search?q=(%23twitterature%20OR%20%23micropoesie)%20lang%3Afr&src=recent_search_click
+def get_authors_using(hashtag, research_words=None):
+    """
+    TODO : keeping the number of times an author appears in a research
+    Returns a set of authors twitter's id using specific hashtag(s) (and potentially other words)
+    :param hashtag: list or string
+    :param research_words: string
+    :return: set
+    """
     if type(hashtag) == str:
         results = api.GetSearch(term=f"#{hashtag}", lang="fr", count="100")
     else :
-        # ?q=Poème (%23twitterature OR %23poesie)
         hashtag = ["%23" + h  for h in hashtag]
         hashtag = (" OR").join(hashtag)
-        results = api.GetSearch(term=f"{mots_cles} ({hashtag})", lang="fr", count="100")
-
-
+        results = api.GetSearch(term=f"{research_words} ({hashtag})", lang="fr", count="100")
     authors = []
     for r in results:
         authors.append(r.user.screen_name)
@@ -38,7 +37,11 @@ def get_authors_using(hashtag, mots_cles=None):
     return set(authors)
 
 def get_author_retweeters(author):
-    # TODO : prendre en considération compte pour le graphe
+    """
+    Returns the list of ids of users who retweeted the tweets of a specific author
+    :param author: str (username of author)
+    :return: list (ids of authors)
+    """
     retweeters_final = []
     results = api.GetSearch(raw_query=f"q=from%3A{author}&result_type=recent&since=2014-07-19&count=100")
     for r in results:
@@ -49,32 +52,17 @@ def get_author_retweeters(author):
         if retweeters:
             for ret in retweeters :
                 retweeters_final.append((author, ret))
-    # compte = Counter(retweeters)
-    # print(compte)
     return retweeters_final
 
-def create_graph_retweeters(retweeters):
-    #author : string
-    # retweeters : list
-    # Il faudra faire des tuple auteur / retweeter
-    # Et une longue liste de tous les noeuds
-    options = {
-    'node_color': 'green',
-    'node_size': 50,
-    'width': 1,
-    'with_labels' : True
-}
-    G = nx.Graph()
-    # G.add_node(author)
-    # G.add_nodes_from(retweeters)
-    for a, r in retweeters:
-        G.add_edge(a, r)
-    print("le graph", G.number_of_edges())
-    nx.draw_circular(G, **options)
-    plt.savefig("graph.png")
 
 
-def create_csv_authors():
+def create_csv_authors(json, csv):
+    """
+    Create a csv file (that can be easily read with excel) with a list of authors + hashtag they were discovered with + biography
+    :param json: json file
+    :param csv: csv file
+    :return: None
+    """
     with open('authors_hashtags.json', 'r', encoding='utf-8') as jsonfile:
         authors_dict = json.load(jsonfile)
     with open('persons_hashtags.csv', 'w', encoding="utf-8") as csvfile:
@@ -91,10 +79,13 @@ def create_csv_authors():
 
 
 
-
-
 def get_hashtags_used_with(hashtag_base, all):
-    # raw_query=f"q=%23{hashtag} lang%3Afr&count=100"
+    """
+    Get all the hashtags used with a specific one that are not already in a list (avoids repetitions)
+    :param hashtag_base: str
+    :param all: list
+    :return: list
+    """
     results = api.GetSearch(term=f"#{hashtag_base}", lang="fr", count="100")
     hashtags_next_search = []
     base_list = []
@@ -111,7 +102,7 @@ def get_hashtags_used_with(hashtag_base, all):
 
 if __name__ == '__main__':
     counter = 0
-    with open("all_hashtags.md", "r", encoding="utf-8") as doc_hashtags:
+    with open("all_hashtags_triee.md", "r", encoding="utf-8") as doc_hashtags:
         hashtags = doc_hashtags.readlines()
         authors = dict()
     for hashtag in hashtags:
@@ -126,13 +117,13 @@ if __name__ == '__main__':
     # authors = dict()
     # for i, request in enumerate(requests):
     #     authors[str(i)] = list(get_authors_using(request[0], requests[1]))
-    # print(authors)
+    # print(authors)https://manif.app/?lat=45.19242647710092&long=5.725722312927246&zoom=16&lang=fr
     #
     # print(authors)
-    with open("authors_hashtags.json", "w", encoding="utf-8") as authors_json:
-        json.dump(authors, authors_json, indent=True)
-
-    create_csv_authors()
+    # with open("authors_hashtags.json", "w", encoding="utf-8") as authors_json:
+    #     json.dump(authors, authors_json, indent=True)
+    #
+    # create_csv_authors()
 
     # retweeters = []
     # sampoesie =  [
@@ -150,6 +141,3 @@ if __name__ == '__main__':
     # create_graph_retweeters(retweeters)
 
 
-# TODO : Récupérer les tweets de qqun
-# TODO : Pr chaque tweet regarder qui le retweet
-# TODO : stocker la liste des retweeters avec des tuples nom / nb de fois

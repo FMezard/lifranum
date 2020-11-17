@@ -1,7 +1,0 @@
-Poésie
-poesia
-twitterature
-tweeterature
-oulipo
-oulipien
-twittecriture
