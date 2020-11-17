@@ -101,7 +101,8 @@ def get_hashtags_used_with(hashtag_base, all):
 
 if __name__ == '__main__':
     counter = 0
-    with open("all_hashtags_triee.md", "r", encoding="utf-8") as doc_hashtags:
+    # getting all authors using our list of #
+    with open("all_hashtags_triee.txt", "r", encoding="utf-8") as doc_hashtags:
         hashtags = doc_hashtags.readlines()
         authors = dict()
     for hashtag in hashtags:
@@ -109,34 +110,13 @@ if __name__ == '__main__':
         authors[hashtag] = list(get_authors_using(hashtag))
         counter += len(authors[hashtag])
 
-    # requests = [(["Poésie"], "Tanka"),
-    #              (["1mot1haiku"], "haiku"),
-    #              (["Poésie"], "haiku"),
-    #              (["twitterature", "poesie", "poem"], "Tanka")]
-    # authors = dict()
-    # for i, request in enumerate(requests):
-    #     authors[str(i)] = list(get_authors_using(request[0], requests[1]))
-    # print(authors)https://manif.app/?lat=45.19242647710092&long=5.725722312927246&zoom=16&lang=fr
-    #
-    # print(authors)
-    # with open("authors_hashtags.json", "w", encoding="utf-8") as authors_json:
-    #     json.dump(authors, authors_json, indent=True)
-    #
-    # create_csv_authors()
 
-    # retweeters = []
-    # sampoesie =  [
-    #
-    #   "Faustruy",
-    #   "SandraDulier",
-    #   "DinaBail",
-    #   "didou_52",
-    #   "jeannick_odier",
-    #   "TweetDePoemes",
-    #   "lepolymorphe",
-    #   "RidyardColin"]
-    # for author in sampoesie:
-    #     retweeters.extend(get_author_retweeters(author))
-    # create_graph_retweeters(retweeters)
+    with open("authors_hashtags.json", "w", encoding="utf-8") as authors_json:
+        json.dump(authors, authors_json, indent=True)
+
+    # Saving the dict of authors per hashtags to a csv file and adding the bio of the author
+    create_csv_authors(authors, "authors_hashtags.csv")
+
+
 
 
