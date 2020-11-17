@@ -56,15 +56,14 @@ def get_author_retweeters(author):
 
 
 
-def create_csv_authors(json, csv):
+def create_csv_authors(authors_dict, csv):
     """
     Create a csv file (that can be easily read with excel) with a list of authors + hashtag they were discovered with + biography
-    :param json: json file
+    :param authors_dict: dict of authors per hashtags
     :param csv: csv file
     :return: None
     """
-    with open('authors_hashtags.json', 'r', encoding='utf-8') as jsonfile:
-        authors_dict = json.load(jsonfile)
+
     with open('persons_hashtags.csv', 'w', encoding="utf-8") as csvfile:
         filewriter = csv.writer(csvfile, delimiter=';',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
