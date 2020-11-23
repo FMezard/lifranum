@@ -33,6 +33,7 @@ def get_authors_using(hashtag, research_words=None):
     authors = []
     for r in results:
         authors.append(r.user.screen_name)
+
         print(r.id)
     return set(authors)
 
@@ -56,7 +57,7 @@ def get_author_retweeters(author):
 
 
 
-def create_csv_authors(authors_dict, csv):
+def create_csv_authors(authors_dict, csv_name):
     """
     Create a csv file (that can be easily read with excel) with a list of authors + hashtag they were discovered with + biography
     :param authors_dict: dict of authors per hashtags
@@ -64,7 +65,7 @@ def create_csv_authors(authors_dict, csv):
     :return: None
     """
 
-    with open('persons_hashtags.csv', 'w', encoding="utf-8") as csvfile:
+    with open(csv_name, 'w', encoding="utf-8") as csvfile:
         filewriter = csv.writer(csvfile, delimiter=';',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
         for hashtag, authors in authors_dict.items():
@@ -72,7 +73,7 @@ def create_csv_authors(authors_dict, csv):
             for a in authors:
                 results = api.GetSearch(raw_query=f"q=from%3A{a}&result_type=recent&since=2014-07-19&count=1")
                 if results:
-                    filewriter.writerow([hashtag, a, f'"{results[0].user.description}"'])
+                    filewriter.writerow([hashtag, a, results[0].user.description, results[0].user.url])
                 else :
                     filewriter.writerow([hashtag, a, "Description non trouvée"])
 
@@ -102,21 +103,21 @@ def get_hashtags_used_with(hashtag_base, all):
 if __name__ == '__main__':
     counter = 0
     # getting all authors using our list of #
-    with open("all_hashtags_triee.txt", "r", encoding="utf-8") as doc_hashtags:
-        hashtags = doc_hashtags.readlines()
-        authors = dict()
-    for hashtag in hashtags:
-        hashtag = hashtag.replace("\n", "")
-        authors[hashtag] = list(get_authors_using(hashtag))
-        counter += len(authors[hashtag])
-
-
-    with open("authors_hashtags.json", "w", encoding="utf-8") as authors_json:
-        json.dump(authors, authors_json, indent=True)
-
-    # Saving the dict of authors per hashtags to a csv file and adding the bio of the author
-    create_csv_authors(authors, "authors_hashtags.csv")
-
-
-
+    # with open("all_hashtags_triee.txt", "r", encoding="utf-8") as doc_hashtags:
+    #     hashtags = doc_hashtags.readlines()
+    #     authors = dict()
+    # for hashtag in hashtags:
+    #     hashtag = hashtag.replace("\n", "")
+    #     authors[hashtag] = list(get_authors_using(hashtag))
+    #     counter += len(authors[hashtag])
+    #
+    #
+    # with open("authors_hashtags.json", "w", encoding="utf-8") as authors_json:
+    #     json.dump(authors, authors_json, indent=True)
+    #
+    # # Saving the dict of authors per hashtags to a csv file and adding the bio of the author
+    # create_csv_authors(authors, "authors_hashtags.csv")
+    authors = dict()
+    authors["wattpad"] = get_authors_using("wattpad")
+    create_csv_authors(authors, '23112020_wattpad_authors.csv')
 
