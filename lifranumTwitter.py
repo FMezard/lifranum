@@ -3,6 +3,14 @@ import twitter
 import json
 import csv
 import os
+import unidecode
+import pprint
+import networkx as nx
+import matplotlib.pyplot as plt
+import scipy
+
+
+from hashtags import HashtagsVocabularyGraph
 
 # TODO : Mettre des variables d'env
 # TODO : Virer les # en double
@@ -12,6 +20,7 @@ api = twitter.Api(consumer_key=os.getenv('CONSUMER_KEY'),
                   consumer_secret=os.getenv('CONSUMER_SECRET'),
                   access_token_key=os.getenv('ACCESS_TOKEN_KEY'),
                   access_token_secret=os.getenv('ACCESS_TOKEN_SECRET'),
+                  tweet_mode='extended',
                   sleep_on_rate_limit=True
                   )
 
@@ -57,6 +66,7 @@ def get_author_retweeters(author):
 
 
 
+
 def create_csv_authors(authors_dict, csv_name):
     """
     Create a csv file (that can be easily read with excel) with a list of authors + hashtag they were discovered with + biography
@@ -79,25 +89,83 @@ def create_csv_authors(authors_dict, csv_name):
 
 
 
-def get_hashtags_used_with(hashtag_base, all):
-    """
-    Get all the hashtags used with a specific one that are not already in a list (avoids repetitions)
-    :param hashtag_base: str
-    :param all: list
-    :return: list
-    """
-    results = api.GetSearch(term=f"#{hashtag_base}", lang="fr", count="100")
-    hashtags_next_search = []
-    base_list = []
-    for r in results:
-        for hashtag in r.hashtags:
-            base_list.append(hashtag.text)
-    counter = Counter(base_list)
-    for hashtag in counter:
-        if counter[hashtag] > 2 and hashtag not in all and hashtag is not hashtag_base:
-            hashtags_next_search.append(hashtag.lower())
-    return hashtags_next_search
 
+
+def create_hashtags_edges_list(root_list):
+    # TODO : ajouter un niveau de recherche de hashtags
+    with open(root_list, "r", encoding="utf-8") as text :
+        hashtags_base = text.readlines().strip()
+    with open("graph_hashtags.csv", "w", newline='\n') as csv_graph :
+        thewriter = csv.writer(csv_graph, delimiter='\t',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for h_base in hashtags_base:
+            for hashtag in get_hashtags_used_with(h_base, []):
+                thewriter.writerow([h_base.strip(), hashtag[0], hashtag[1]])
+
+def create_hashtags_graph_viz(graph):
+    hashtags_graph = nx.read_edgelist(graph, delimiter="\t", data=[('Weight', int)])
+    print(len(nx.nodes(hashtags_graph)))
+    nodes = [u for (u,v) in nx.degree(hashtags_graph, weight="Weight") if v > 2]
+    hashtags_graph = nx.subgraph(hashtags_graph, nodes)
+    print(len(nx.nodes(hashtags_graph)))
+    elarge = [(u, v) for (u, v, d) in hashtags_graph.edges(data=True) if d["Weight"] > 5]
+    esmall = [(u, v) for (u, v, d) in hashtags_graph.edges(data=True) if d["Weight"] <= 5]
+    pos = nx.kamada_kawai_layout(hashtags_graph)  # positions for all nodes
+    # k=0.4,,  weight="Weight"
+    # nodes
+    nx.draw_networkx_nodes(hashtags_graph, pos, node_size=30)
+
+    # edges
+    nx.draw_networkx_edges(hashtags_graph, pos, edgelist=elarge, width=1.5, edge_color="b")
+    nx.draw_networkx_edges(
+        hashtags_graph, pos, edgelist=esmall, width=0.3, alpha=0.5, edge_color="b"
+    )
+
+    nx.draw_networkx_labels(hashtags_graph, pos, font_size=7, font_family="sans-serif")
+    plt.show()
+
+
+    plt.savefig("graph.png")
+
+
+
+
+
+def get_author_retweeters(author):
+    # TODO : prendre en considération compte pour le graphe
+    retweeters_final = []
+    results = api.GetSearch(term=f"@{author}", lang="fr", count="100")
+    for r in results:
+        if r.retweeted_status :
+            retweeters = api.GetRetweeters(r.retweeted_status.id)
+        else :
+            retweeters = None
+        if retweeters:
+            for ret in retweeters :
+                retweeters_final.append((author, ret))
+    # compte = Counter(retweeters)
+    # print(compte)
+    return retweeters_final
+
+def create_graph_retweeters(retweeters):
+    #author : string
+    # retweeters : list
+    # Il faudra faire des tuple auteur / retweeter
+    # Et une longue liste de tous les noeuds
+    options = {
+    'node_color': 'green',
+    'node_size': 50,
+    'width': 1,
+    'with_labels' : True
+}
+    G = nx.Graph()
+    # G.add_node(author)
+    # G.add_nodes_from(retweeters)
+    for a, r in retweeters:
+        G.add_edge(a, r)
+    print("le graph", G.number_of_edges())
+    nx.draw_circular(G, **options)
+    plt.savefig("graph.png")
 
 
 if __name__ == '__main__':
@@ -117,7 +185,20 @@ if __name__ == '__main__':
     #
     # # Saving the dict of authors per hashtags to a csv file and adding the bio of the author
     # create_csv_authors(authors, "authors_hashtags.csv")
-    authors = dict()
-    authors["wattpad"] = get_authors_using("wattpad")
-    create_csv_authors(authors, '23112020_wattpad_authors.csv')
+    # authors = dict()
+    # authors["wattpad"] = get_authors_using("wattpad")
+    # create_csv_authors(authors, '23112020_wattpad_authors.csv')
 
+    # print(create_hashtags_graph_viz("graph_hashtags.csv"
+
+    # Si on veut avoir un nouveau graph en interrogeant twitter à nouveau, mettre graph=None ou ne pas mettre graph
+    hashtags = HashtagsVocabularyGraph("20201611_hashtags_l1_corr.txt", api, graph_file="20201611_hashtags_l1_corrgraph.csv")
+    print(hashtags.newlist)
+    with open("20202611_hashtags_l2.txt", "w", encoding="utf-8") as file:
+        for h in hashtags.newlist:
+            file.write(h + "\n")
+    hashtags.create_hashtags_graph_viz()
+    # hashtags.create_hashtags_graph_viz()
+# TODO : refaire la liste des # avec du code qui ressemble à qque chose ! et un graphe !
+# TODO : écrire du code pour récupérer des auteurs et les stocker dans un très gros CSV
+# TODO : Réfléchir à comment repérer qui retweete qui
