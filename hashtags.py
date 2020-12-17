@@ -11,7 +11,7 @@ import scipy
 
 class HashtagsVocabularyGraph():
     # C'est une classe qui permet de faire des interrogation des # et de faire des graphes
-    def __init__(self, baselist, api, graph_file):
+    def __init__(self, baselist, api, graph_file=None):
         self.api = api
         self.graph_file = graph_file
 
@@ -26,9 +26,8 @@ class HashtagsVocabularyGraph():
 
         self.graph = nx.read_edgelist(self.filename, delimiter="\t", data=[('Weight', int)])
         nodes = [u for (u,v) in nx.degree(self.graph, weight="Weight") if v > 5]
-        self.graph = nx.subgraph(self.graph, nodes)
-        self.newlist = self.graph.nodes()
-        # self.create_hashtags_graph_viz()
+        self.sub_graph = nx.subgraph(self.graph, nodes)
+        self.newlist = self.sub_graph.nodes()
 
 
     def get_hashtags_used_with(self, hashtag_base):
@@ -69,17 +68,13 @@ class HashtagsVocabularyGraph():
         #
         # hashtags_graph = nx.read_edgelist(filename, delimiter="\t", data=[('Weight', int)])
 
-
         elarge = [(u, v) for (u, v, d) in self.graph.edges(data=True) if d["Weight"] > 5]
         esmall = [(u, v) for (u, v, d) in self.graph.edges(data=True) if d["Weight"] <= 5]
 
         rootnodes = [u for (u, v) in self.graph.nodes(data=True) if u in self.hashtags_roots]
         print(rootnodes)
 
-        pos = nx.kamada_kawai_layout(self.graph)  # positions for all nodes
-        # k=0.4,,  weight="Weight"
-        # nodes
-
+        pos = nx.kamada_kawai_layout(self.graph)
         nx.draw_networkx_nodes(self.graph, pos, node_size=30)
 
         # edges
@@ -93,7 +88,6 @@ class HashtagsVocabularyGraph():
 
         nx.draw_networkx_labels(self.graph, pos, font_size=7, font_family="sans-serif")
         plt.show()
-
         plt.savefig("graph.png")
 
 
