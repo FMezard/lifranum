@@ -5,6 +5,7 @@ import twitter
 import json
 import csv
 import os
+from datetime import datetime
 import unidecode
 import pprint
 import networkx as nx
@@ -22,8 +23,7 @@ api = twitter.Api(consumer_key=os.getenv('CONSUMER_KEY'),
                   tweet_mode='extended',
                   sleep_on_rate_limit=True
                   )
-
-
+today = datetime.now().strftime("%Y%m%d")
 if __name__ == '__main__':
     # baselist = ""
     # graph_file = ""
