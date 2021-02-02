@@ -16,7 +16,10 @@ Le dossier AUTHORS_RESULTS contient
 - `23112020_wattpad_authors.csv` : résultat d'une recherche des auteurs utilisant le #wattpad 
 - `23112020_persons_hasthags.csv` : liste de tous les auteurs utilisant les hashtags sélectionnés (`20202611_hashtags_l1_corr`) avec leur bio.  
 - `retweet_graph.ipynb` : jupyter notebook pour faire les graphes de retweets à partir d'une liste d'auteurs
+- `20201209_auteurs_base.txt` liste d'auteurs sélectionnés par Lorraine à partir d'une requête sur les hashtags, d'auteurs de cartoweb et d'auteurs trouvés sur d'autres médias. 
 
 TODO : 
 - remettre toutes les dates au bon format
 - ajouter dans le code la date automatiquement dans les noms de fichier
+
+
