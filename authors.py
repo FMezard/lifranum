@@ -1,4 +1,4 @@
-def get_authors_using(hashtag, research_words=None):
+def get_authors_using(api, hashtag, research_words=None):
     """
     TODO : keeping the number of times an author appears in a research
     Returns a set of authors twitter's id using specific hashtag(s) (and potentially other words)
