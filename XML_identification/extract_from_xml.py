@@ -43,10 +43,9 @@ with open("Corrige_URLs_Lifranum_2021_01_19.csv", "r", encoding="utf-8") as csv_
         if line[2] == "methodologie":
             if line[0] in types_urls:
                 new_line.append(types_urls[line[0]])
-                print(new_line)
         new_csv_lines.append(new_line)
 
-with open("2021_02_09_urls_lifranum.csv", "w", newline='', encoding="utf-8") as csv_file:
+with open("2021_02_10_urls_lifranum.csv", "w", newline='', encoding="utf-8") as csv_file:
     writer = csv.writer(csv_file, delimiter=';', quotechar='|')
     for line in new_csv_lines:
         writer.writerow(line)
