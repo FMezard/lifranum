@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="edition">
+    	<sequence>
+    		<element name="publicationtype" type="string"></element>
+    		<element name="format" type="string"></element>
+    		<element name="regularity" type="string"></element>
+    		<element name="responsiblename" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="https://vasescommunicantsliste.wordpress.com/">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="library">
+    	<sequence>
+    		<element name="network" type="http://www.tierslivre.net/"></element>
+    		<element name="network" type="http://www.scriptopolis.fr/"></element>
+    		<element name="network" type="http://alainhaye.over-blog.com/"></element>
+<!--platform à liens prolifiques!-->
+    		<element name="catalog" type="https://www.facebook.com/groups/104893605886/"></element>
+    	</sequence>
+    </complexType>
+</schema>

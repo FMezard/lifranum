@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://mariannedesroziers.blogspot.com/"></element>
+<!--site promotionnel !-->
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="http://lepandemoniumlitteraire.blogspot.com/"></attribute>
+    			<attribute name="link0" type="https://fr.calameo.com/read/000676683078ad7ef6866"></attribute>
+
+    			<attribute name="link1" type="https://litt-orale.com/"></attribute>
+    			<attribute name="link1" type="https://revue-traversees.com/"></attribute>
+    			<attribute name="link1" type="https://www.terreaciel.net/"></attribute>
+    			<attribute name="link1" type="https://lapsusulaval.wordpress.com/"></attribute>
+    			<attribute name="link1" type="https://christophesiebert.wordpress.com/"></attribute>
+    			<attribute name="link1" type="https://sites.google.com/site/revuepaysagesecrits/"></attribute>
+    			<attribute name="link1" type="http://www.revuecabaret.com/"></attribute>
+    			<attribute name="link1" type="http://revue-zinzoline.over-blog.com/"></attribute>
+    			<attribute name="link1" type="http://revue17secondes.blogspot.com/"></attribute>
+    			<attribute name="link1" type="https://www.cequireste.fr/"></attribute>
+    			<attribute name="link1" type="http://www.sistoeurs.net/"></attribute>
+    			<attribute name="link1" type="http://www.le-capital-des-mots.fr/"></attribute>
+    			<attribute name="link1" type="http://lichen-poesie.blogspot.com/"></attribute>
+    			<attribute name="link1" type="https://www.lecastormagazine.com/"></attribute>
+    			<attribute name="link1" type="http://www.editionsdelabatjour.com/"></attribute>
+    			<attribute name="link1" type="https://www.revuesqueeze.com/"></attribute>
+    			<attribute name="link1" type="http://www.pandesmuses.fr/"></attribute>
+    			<attribute name="link1" type="https://infusionrevue.wordpress.com/"></attribute>
+    			<attribute name="link1" type="http://onuphrius.fr/"></attribute>
+    			<attribute name="link1" type="http://ancrages.ca/"></attribute>
+    			<attribute name="link1" type="https://hazardzoneeditions.wixsite.com/abridedition"></attribute>
+    			<attribute name="link1" type="http://leconvoidesglossolales.blogspot.com/"></attribute>
+
+    			<attribute name="link2" type="http://billets.domec.net/post/2016/10/19/Po%C3%A8me-de-Marianne-Desroziers-pour-la-famille-Karasani"></attribute>
+    			<attribute name="link2" type="http://ancrages.ca/edition/no-15-chemins-de-vers-poesie/marianne-desroziers-carnet-rouge/"></attribute>
+    			<attribute name="link2" type="http://lichen-poesie.blogspot.com/p/marianne-desroziers.html"></attribute>
+    			<attribute name="link2" type="https://fr.calameo.com/read/001032712653467f9d2fb"></attribute>
+    			<attribute name="link2" type="http://www.pandesmuses.fr/musemodernejasmin.html"></attribute>
+    			<attribute name="link2" type="http://onuphrius.fr/conversation-avec-marianne-desroziers/"></attribute>
+    			<attribute name="link2" type="https://www.lignesdevie.com/page/18/"></attribute>
+    			<attribute name="link2" type="https://www.labyrinthiques.fr/2014/11/07/couleurs-et-matieres-marianne-desroziers-vasesco/"></attribute>
+    			<attribute name="link2" type="https://fr.calameo.com/read/00202738979f3aef0fd50"></attribute>
+    			<attribute name="link2" type="http://www.le-capital-des-mots.fr/2016/07/le-capital-des-mots-marianne-desroziers.html"></attribute>
+    			<attribute name="link2" type="http://revuemeninge.com/wp-content/uploads/2016/09/RM07_4h30-5h30_v1.pdf"></attribute>
+    			<attribute name="link2" type="https://www.lecastormagazine.com/insurrection-poetique"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

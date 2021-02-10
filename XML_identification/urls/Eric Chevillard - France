@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://autofictif.blogspot.com/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://franckgarot.net/"></attribute>
+
+    			<attribute name="link0" type="http://www.eric-chevillard.net/actualite.html"></attribute>
+    			<attribute name="link0" type="http://www.article11.info/?Eric-Chevillard-J-admire-l"></attribute>
+
+    			<attribute name="link1" type="https://www.boriswolowiec.fr/"></attribute>
+    			<attribute name="link1" type="https://revuecatastrophes.wordpress.com/"></attribute>
+    			<attribute name="link1" type="http://www.tierslivre.net/"></attribute>
+    			<attribute name="link1" type="https://remue.net/"></attribute>
+    			<attribute name="link1" type="http://www.t-pas-net.com/"></attribute>
+    			<attribute name="link1" type="http://dansesdetravers.blogspot.com/"></attribute>
+   			<attribute name="link1" type="http://hublots2.blogspot.com/"></attribute>
+   			<attribute name="link1" type="https://louvalse.fr/"></attribute>
+   			<attribute name="link1" type="http://francois-matton.blogspot.com/"></attribute>
+   			<attribute name="link1" type="http://lucette.desvignes.over-blog.com/"></attribute>
+   			<attribute name="link1" type="https://www.facebook.com/olivier.hervy"></attribute>
+   			<attribute name="link1" type="http://www.jptoussaint.com/"></attribute>
+   			<attribute name="link1" type="https://pierrealainmercoeur.wordpress.com/"></attribute>
+   			<attribute name="link1" type="https://clementbenech.tumblr.com/"></attribute>
+   			<attribute name="link1" type="http://www.territoire3.org"></attribute>
+   			<attribute name="link1" type="http://julienmetais.over-blog.com/"></attribute>
+   			<attribute name="link1" type="http://www.lesrestesdubanquet.com/"></attribute>
+
+    			<attribute name="link2" type="http://www.le-tigre.net/Chiens-ecrases-vol-V.html"></attribute>
+    			<attribute name="link2" type="http://www.le-tigre.net/L-autofictif,12306.html"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://deboitements.net/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="https://www.instagram.com/christogrossi/"></attribute>
+    			<attribute name="link0" type="https://twitter.com/christogrossi"></attribute>
+    			<attribute name="link0" type="https://www.facebook.com/deboitements"></attribute>
+
+    			<attribute name="link1" type="https://www.atelierdebricolage.net/"></attribute>
+    			<attribute name="link1" type="http://lesnuitsechouees.blogspot.com/"></attribute>
+<!-- site personnel avec liens prolifiques !-->
+
+    			<attribute name="link2" type="https://video-streaming.orange.fr/actu-politique/un-livre-2-0-entretien-avec-christophe-grossi-autour-de-ricordi-CNT0000019mRr8.html"></attribute>
+    			<attribute name="link2" type="https://www.tierslivre.net/spip/spip.php?article2423"></attribute>
+    			<attribute name="link2" type="https://flaneriequotidienne.wordpress.com/2011/05/06/carnet-de-route-pellicule/"></attribute>
+    			<attribute name="link2" type="https://www.face-ecran.fr/2013/05/02/les-jours-ou-ca-christophe-grossi"></attribute>
+    			<attribute name="link2" type="https://sauvageana.blogspot.com/2011/07/vases-communicants-juillet-2011.html"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

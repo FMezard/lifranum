@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://audreygourjon.blogspot.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://www.haikus-iocasta.be/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.instagram.com/audreypoetry/"/>
+                 <enumeration value="http://jetsdencre.univ-lyon1.fr/nouvelles/concours/jets-dencre-2014/sables-immuables-audrey-gourjon/?doing_wp_cron=1581523942.6504740715026855468750"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://haikuduvidetdelaplenitude.blogspot.com/"/>
+                  <enumeration value="hhttp://vincent-calebasse.blogspot.com/"/>
+                  <enumeration value="http://justequelquespoemes.over-blog.com/"/>
+                  <enumeration value="hhttp://www.haikus-iocasta.be/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="http://calebasse1.rssing.com/chan-7803403/all_p4.html"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="https://www.francoiserenaud.com/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="http://francoiserenaud.com/terrainfragile/"></attribute>
+    			<attribute name="link0" type="http://francoiserenaud.com/terrainfragile/photographies/"></attribute>
+    			<attribute name="link0" type="http://francoiserenaud.com/vo/"></attribute>
+   			<attribute name="link0" type="https://www.facebook.com/francoise.renaud.90"></attribute>
+
+    			<attribute name="link1" type="string"></attribute>
+
+    			<attribute name="link2" type="https://www.fut-il.net/2016/05/fil-bleu-des-levres-vasesco-francoise.html"></attribute>
+    			<attribute name="link2" type="https://www.tierslivre.net/ateliers/author/frenaud/"></attribute>
+    			<attribute name="link2" type="https://hadominique75.wordpress.com/2016/12/02/vers-lhorizon-perdu-12/"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

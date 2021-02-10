@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="https://www.dailleurspoesie.com/">
+
+    	<attribute name="provenance" type="http://verrementhe.blogspirit.com/"></attribute>
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Valérie Canat de Chizy"/>
+        <element name="personname" type="Anna Jouy"/>
+        <element name="personname" type="Florent Toniello"/>
+        <element name="personname" type="Christian Garaud"/>
+        <element name="personname" type="Oz Hardwik"/>
+        <element name="rolename" type="rédacteurs"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="string"/>
+        <element name="publicationtype" type="string"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="string"/>
+        <element name="date" type="string"/>
+        <element name="responsible" type="string"/>
+        <element name="location" type="string"/>
+      </simpleType>
+  </complexType>
+
+      <complexType name="library">
+    	<sequence>
+    		<element name="network" type="http://indigo.over-blog.com.over-blog.net/"></element>
+    		<element name="network" type="https://lescosaquesdesfrontieres.com/"></element>
+    		<element name="network" type="http://luminitzatigirlas.eklablog.com/"></element>
+    		<element name="network" type="http://sabinehuynh.com/"></element>
+    		<element name="network" type="https://barbara-le-moene.wixsite.com/"></element>
+    		<element name="catalog" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

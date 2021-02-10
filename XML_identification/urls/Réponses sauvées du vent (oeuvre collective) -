@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/collectiveauthor" xmlns:tns="http://www.example.org/collectiveauthor" elementFormDefault="qualified">
+
+    <complexType name="webpresence">
+    	<sequence>
+    		<element name="siteblog" type="http://reponsessauveesduvent.blogspot.com/"></element>
+    		<element name="socialnetworks" type="string"></element>
+    		<element name="community" type="string"></element>
+        			</sequence>
+    			<attribute name="provenance" type="http://etc-iste.blogspot.com/"></attribute>
+    </complexType>
+
+    <complexType name="author">
+    	<sequence>
+    		<element name="name" type="Thomas Vinau"></element>
+    		<element name="occupation" type="Iniateur du projet d'écriture"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="2007 - 2010"></complexType>
+
+    <complexType name="manifestation">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="date" type="string"></element>
+    		<element name="responsable" type="string"></element>
+    		<element name="location" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="publication">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="publicationtype" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+     <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="http://www.martin-page.fr/blog/"/>
+    <attribute name="link1" type="http://antoinebrea.blogspot.com/"/>
+    <attribute name="link1" type="http://nouvellerevuemoderne.free.fr/"/>
+    <attribute name="link1" type="http://traction-brabant.blogspot.com/"/>
+    <attribute name="link1" type="http://www.francopolis.net/salon/EricDejaeger.htm"/>
+    <attribute name="link1" type="http://www.fannychiarello.com/"/>
+    <attribute name="link1" type="http://academie23.blogspot.com/http://academie23.blogspot.com/"/>
+    <attribute name="link1" type="http://www.lieux-dits.eu/"/>
+   <attribute name="link1" type="http://konsstrukt.blogspot.com/"/>
+   <attribute name="link1" type="http://etats.civils.free.fr/"/>
+   <attribute name="link1" type="http://etc-iste.blogspot.com/"/>
+   <attribute name="link1" type="https://curiosaetc.wordpress.com/"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://salvatore-sanfilippo.over-blog.com/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="https://www.facebook.com/profile.php?id=100005125118007"></attribute>
+
+    			<attribute name="link0" type="string"></attribute>
+
+    			<attribute name="link1" type="http://traction-brabant.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://courttoujours.hautetfort.com/"></attribute>
+    			<attribute name="link1" type="http://evazine.com/"></attribute>
+    			<attribute name="link1" type="http://armand.le.poete.free.fr/"></attribute>
+    			<attribute name="link1" type="http://monnuage.free.fr/"></attribute>
+    			<attribute name="link1" type="http://etc-iste.blogspot.com/"></attribute>
+
+    			<attribute name="link2" type="http://www.poetika17.com/touslespoemes-5.html"></attribute>
+    			<attribute name="link2" type="http://www.le-capital-des-mots.fr/article-le-capital-des-mots-salvatore-sanfilippo-64107999.html"></attribute>
+
+    			<attribute name="link3" type="https://accrocstich.es/index.php?"></attribute>
+    			<attribute name="link3" type="https://www.terreaciel.net/"></attribute>
+    			<attribute name="link3" type="http://www.ral-m.com/revue/IMG/pdf_poemes_epars_44.pdf"></attribute>
+          <attribute name="link3" type="https://cheminsbattus.wordpress.com/"></attribute>
+          <attribute name="link3" type="https://hervegasser.com/"></attribute>
+          <attribute name="link3" type="https://prendreapart.wordpress.com/"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

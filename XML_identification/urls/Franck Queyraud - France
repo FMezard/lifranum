@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="https://flaneriequotidienne.wordpress.com/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="https://www.instagram.com/gueuloirspublics/"></attribute>
+
+    			<attribute name="link1" type="https://vasescommunicantsliste.wordpress.com/"></attribute>
+    			<attribute name="link1" type="https://jardinsdetecommedhiver.tumblr.com/"></attribute>
+    			<attribute name="link1" type="https://wingsofflo.tumblr.com/"></attribute>
+    			<attribute name="link1" type="http://www.tierslivre.net/"></attribute>
+    			<attribute name="link1" type="http://www.scriptopolis.fr/"></attribute>
+    			<attribute name="link1" type="https://brigetoun.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://www.gadinsetboutsdeficelles.net/"></attribute>
+
+    			<attribute name="link2" type="https://twitter.com/MemoireSilence"></attribute>
+    			<attribute name="link2" type="https://memoire2silence.wordpress.com/"></attribute>
+    			<attribute name="link2" type="https://diacritik.com/2016/10/19/la-marelle-au-bord-de-la-mediterranee-rencontre-avec-pascal-jourdana/"></attribute>
+    			<attribute name="link2" type="https://diacritik.com/2016/07/07/anne-savelli-faire-des-romans-sur-la-vie-une-ville-au-loin/"></attribute>
+    			<attribute name="link2" type="https://www.tierslivre.net/spip/spip.php?article3258"></attribute>
+   			<attribute name="link2" type="https://litteraturesauvage.wordpress.com/2014/08/01/vaseco-7-silence-sauvage-de-franck-queyraud/"></attribute>
+   			<attribute name="link2" type="https://leportraitinconscient.com/2014/02/07/franck-queyraud-il-fallait-accepter-la-possibilite-de-tout-perdre-vasesco-fevrier-2014/"></attribute>
+   			<attribute name="link2" type="http://www.àchatperché.net/spip/spip.php?article635"></attribute>
+   			<attribute name="link2" type="https://sauvageana.blogspot.com/2014/05/vases-communicants-franck-queyraud.html"></attribute>
+   			<attribute name="link2" type="http://www.inacheve.net/spip.php?article343"></attribute>
+   			<attribute name="link2" type="https://samdixneuf.wordpress.com/2011/04/01/ultima-irradieux-experts/"></attribute>
+   			<attribute name="link2" type="http://mariannejaegle.over-blog.fr/article-j-accueille-franck-queyraud-a-l-occasion-des-vases-communiquants-66382496.html"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

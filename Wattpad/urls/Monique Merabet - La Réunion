@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://patpantin.over-blog.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="Zotero"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://www.partagedehaikus.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="http://www.papillonsdemots.fr/2017/04/21/monique-merabet-a-lu-pantouns-autres-poemes-du-retour/"/>
+             <enumeration value="https://cerclopatio.wixsite.com/cercle-o-patio"/>
+          <enumeration value="https://janickbelleau.ca/fr/dossierdepresse.php"/>
+          <enumeration value="http://association-francophone-haibun.com/wp-content/uploads/2019/05/ECHO-28_MAI-2019.pdf"/>
+        <enumeration value="http://pantun-sayang-afp.fr/wp-content/uploads/2018/11/Pantouns-22-octobre-2018.pdf"/>
+        <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong39.pdf"/>
+       <enumeration value="http://www.arpo-poesie.org/media/actualite/avril_2017.pdf"/>
+
+
+        <attribute name="link3" type="string"/>
+                   <enumeration value="https://www.babelio.com/auteur/Monique-Merabet/93082"/>
+                   <enumeration value="https://www.goodreads.com/author/show/6524190.Monique_M_rabet"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

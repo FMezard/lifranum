@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="https://www.facebook.com/profile.php?id=100005125118007"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.facebook.com/profile.php?id=100016461630692"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://www.facebook.com/jeanclaude.cesar"/>
+                  <enumeration value="https://www.facebook.com/philippe.mace.33"/>
+                  <enumeration value="https://www.facebook.com/vincent.hoarau.71"/>
+                  <enumeration value="https://www.facebook.com/patrick.joquel"/>
+                  <enumeration value="https://www.facebook.com/profile.php?id=100011785187115"/>
+                  <enumeration value="https://www.facebook.com/joelleginouxduvivier"/>
+                  <enumeration value="https://www.facebook.com/kevin.broda.7"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.babelio.com/auteur/Christophe-Jubien/353242"/>
+                  <enumeration value="https://www.terreaciel.net/Christophe-Jubien#.XpbH9dLLhPY"/>
+                  <enumeration value="http://chroniques-d-un-newbie.fr/?p=5015"/>
+                  <enumeration value="http://ardentpays12.over-blog.com/2016/09/christophe-jubien-poemes-inedits.html"/>
+                  <enumeration value="https://www.youtube.com/watch?v=4-Ivax58Kfk"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://www.ericdubois.net/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://www.fut-il.net/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.ericdubois.info/"/>
+                  <enumeration value="http://www.le-capital-des-mots.fr/"/>
+                  <enumeration value="https://www.facebook.com/lecapitaldesmotsassociation/"/>
+                  <enumeration value="https://editions-le-capital-des-mots.jimdosite.com/"/>
+                  <enumeration value="http://www.joinvillelepont.eu/"/>
+                  <enumeration value="http://www.lapierredelaube.com/"/>
+                  <enumeration value="https://nouvelorphee.blogspot.com/"/>
+                  <enumeration value="https://soundcloud.com/eric-dubois-8"/>
+                  <enumeration value="https://www.youtube.com/user/ericdubois94"/>
+                  <enumeration value="https://www.dailymotion.com/ericdubois"/>
+                  <enumeration value="http://welovewords.com/eric-dubois"/>
+                  <enumeration value="http://www.tierslivre.net/"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://www.maulpoix.net/"/>
+                  <enumeration value="http://lescarnetsdeucharis.hautetfort.com/"/>
+<!-- site personnel avec liens prolifiques !-->
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://twitter.com/ericdubois?lang=fr"/>
+                  <enumeration value="https://litteraturesauvage.wordpress.com/2014/06/06/vaseco-6-un-poeme-deric-dubois/"/>
+                  <enumeration value="https://poesiemuziketc.wordpress.com/2017/06/23/le-capital-des-mots-eric-dubois-entrevue-avec-melanie-romain/"/>
+                  <enumeration value="http://www.poetika17.com/paroles-de-poetes-eric-dubois.html"/>
+                  <enumeration value="http://memoireduvent.canalblog.com/archives/2009/08/01/14608852.html"/>
+                  <enumeration value="http://raynaldoplouis.over-blog.com/2016/06/poemes-d-eric-dubois.html"/>
+                  <enumeration value="https://www.poesie-en-liberte.fr/avril-2012-eric-dubois/"/>
+                  <enumeration value="https://www.pinterest.fr/ericdubois/"/>
+                  <enumeration value="http://www.lacauselitteraire.fr/le-complexe-de-l-ecrivain-6-par-eric-dubois"/>
+                  <enumeration value="https://www.babelio.com/auteur/Eric-Dubois/87600"/>
+                  <enumeration value="http://francais.agonia.net/index.php/poetry/13998090/Po%C3%A8me"/>
+                  <enumeration value="http://www.francopolis.net/salon/DuboisEric-septembre2013.html"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

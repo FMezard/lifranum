@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="https://remue.net/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Benoît Artige"/>
+        <element name="personname" type="Sereine Berlottier"/>
+        <element name="personname" type="Patrick Chatelier"/>
+        <element name="personname" type="Pascal Gibourg"/>
+        <element name="personname" type="Laurent Grisel"/>
+        <element name="personname" type="Matthieu Guérin"/>
+        <element name="personname" type="Mélanie Guérin"/>
+        <element name="personname" type="Emmanuèle Jawad"/>
+        <element name="personname" type="Vannina Maestri"/>
+     <element name="personname" type="Vannina Maestri"/>
+     <element name="personname" type="José Morel Cinq-Mars"/>
+     <element name="personname" type="Aude Pivin"/>
+     <element name="personname" type="Sébastien Rongier"/>
+     <element name="personname" type="Lucie Taïeb"/>
+     <element name="personname" type="Laurence Werner David"/>
+        <element name="rolename" type="membres du comité de rédaction"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="Revue Remue"/>
+        <element name="publicationtype" type="publication en ligne de textes de création, dossiers, notes de lectures et critiques"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="Les soirées Remue"/>
+        <element name="date" type="22 novembre 2019"/>
+        <element name="responsible" type="Sébastien Rongier"/>
+        <element name="location" type="Maison de la poésie, Paris"/>
+
+       <element name="name" type="La nuit Remue"/>
+        <element name="date" type="23 juin 2018"/>
+        <element name="responsible" type="Sereine Berlottier et Matthieu Guérin"/>
+        <element name="location" type="bibliothèque Marguerite Audoux, Paris"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

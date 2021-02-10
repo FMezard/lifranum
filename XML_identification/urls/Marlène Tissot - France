@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://monnuage.free.fr/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.flickr.com/photos/mon_nuage/"/>
+                  <enumeration value="http://etats.civils.free.fr/revue7"/>
+                  <enumeration value="https://dcccvii.blogspot.com/search/label/Marl%C3%A8ne%20Tissot"/>
+                  <enumeration value="http://fondation.thecroute.com/video_croutes/"/>
+                  <enumeration value="http://www.sistoeurs.net/"/>
+                  <enumeration value="http://vous-dites.brics-a-bracs.com/2011/04/21/faraway-so-close/"/>
+                  <enumeration value="http://fpdv-revue-digitale.blogspot.com/2013/05/fpdv-n39-les-poubelles-obeses-marlene.html"/>
+                  <enumeration value="https://fr.calameo.com/read/002027389ea2f499f4d0d"/>
+                  <enumeration value="http://data.over-blog-kiwi.com/0/99/13/77/20140429/ob_78d7d6_l-ampoule-n-7.pdf"/>
+<!-- site avec liens prolifiques vers publications !-->
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://aladerive.jimdofree.com/"/>
+                  <enumeration value="http://revueangoisse.blogspot.com/"/>
+                  <enumeration value="http://lestasdemots.blogspot.com/"/>
+                  <enumeration value="http://courttoujours.hautetfort.com/"/>
+                  <enumeration value="http://traction-brabant.blogspot.com/"/>
+                  <enumeration value="http://labedan.blogspot.com/"/>
+<!-- site avec liens prolifiques !-->
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.babelio.com/auteur/Marlene-Tissot/213025"/>
+                  <enumeration value="https://twitter.com/marlene_tissot"/>
+                  <enumeration value="http://www.revuecabaret.com/hs1.pdf"/>
+                  <enumeration value="https://fr.calameo.com/read/0020273890877c614886f"/>
+                  <enumeration value="http://bricefaitdesphrases.fr/marlene-tissot-repond-au-questionnaire-du-candide/"/>
+                  <enumeration value="http://revuemeninge.com/wp-content/uploads/2016/06/Revue_Meninge_06_v01.pdf"/>
+                  <enumeration value="https://www.facebook.com/tissotmarlene"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="https://gammalphabets.org/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="https://rubatopleinetvidedelies.wordpress.com/"></attribute>
+    			<attribute name="link0" type="https://bassescontinues.wordpress.com/"></attribute>
+    			<attribute name="link0" type="https://ilpleuvrademain.com/2012/09/06/vase-communicant-avec-jean-yves-fick-jean_yvesf-vasecommunicant/"></attribute>
+    			<attribute name="link0" type="https://empreintestrajectoires.wordpress.com/"></attribute>
+    			<attribute name="link0" type="https://jeanyvesfick.files.wordpress.com/2011/01/un-noyau-de-nuit-comme-avancer-loin-aveuglc3a9-dc3a9ploiement-iii1.pdf"></attribute>
+    			<attribute name="link0" type="https://www.flickr.com/photos/jean_yvesf/"></attribute>
+
+    			<attribute name="link1" type="http://abadon.fr/"></attribute>
+    			<attribute name="link1" type="http://www.arnaudmaisetti.net/spip/spip.php?page=sommaire"></attribute>
+    			<attribute name="link1" type="http://yzabel2046.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://carnet.marcpautrel.net/"></attribute>
+    			<attribute name="link1" type="http://deboitements.net/"></attribute>
+    			<attribute name="link1" type="https://www.face-ecran.fr/"></attribute>
+    			<attribute name="link1" type="http://www.tierslivre.net/"></attribute>
+    			<attribute name="link1" type="http://l-autofictif.over-blog.com/"></attribute>
+    			<attribute name="link1" type="http://www.desordre.net/"></attribute>
+    			<attribute name="link1" type="http://www.lignesdevie.com/"></attribute>
+    			<attribute name="link1" type="http://www.liminaire.fr/"></attribute>
+    			<attribute name="link1" type="http://www.martinesonnet.fr/blogwp/"></attribute>
+    			<attribute name="link1" type="https://brigetoun.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://sabinehuynh.com/index.html"></attribute>
+    			<attribute name="link1" type="http://sebastienrongier.net/spip.php?page=sommaire"></attribute>
+    			<attribute name="link1" type="http://christinejeanney.net/"></attribute>
+
+    			<attribute name="link2" type="http://i-voix.net/tag/poesie%20-%20j-y%20fick/"></attribute>
+    			<attribute name="link2" type="http://www.ericdubois.net/article-texte-de-jean-yves-fick-les-vases-communicants-de-mars-2013-115663001.html"></attribute>
+    			<attribute name="link2" type="https://brigetoun.blogspot.com/2010/06/une-plante-peu-pres-aussi-fraiche-que.html"></attribute>
+    			<attribute name="link2" type="https://www.tierslivre.net/krnk/spip.php?article761#forum5775"></attribute>
+    			<attribute name="link2" type="https://rvjeanney.wordpress.com/2010/04/02/vases-communicants-jean-yves-fick-de-gammalphabets/"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

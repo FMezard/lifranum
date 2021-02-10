@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="https://rappelparolecreation.org/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Nancy R. Lange"/>
+        <element name="rolename" type="présidente et fondatrice"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="chroniques littéraires 2019"/>
+        <element name="publicationtype" type="recension"/>
+        <element name="name" type="concours littéraires ambassadeurs de rivière"/>
+        <element name="publicationtype" type="poème, texte en prose ou lettre ouverte"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="Odanak-Laval"/>
+        <element name="date" type="du 17 au 19 avril 2020"/>
+        <element name="responsible" type="Rappel parole création en collaboration avec la communauté Première nation d'Odanak"/>
+        <element name="location" type="Sainte-Rose, Laval, Canada"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="https://revue-secousse.fr/index.htm">
+    	<sequence>
+    		<element name="publicationtype" type="revue numérique"></element>
+    		<element name="format" type="PDF"></element>
+    		<element name="regularity" type="trimestrielle"></element>
+    		<element name="responsiblename" type="François Boddaert"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="plateform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+</schema>

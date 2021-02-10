@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="https://www.luclamy.net/blog/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="https://www.facebook.com/Le-blog-%C3%A0-luc-237193602455/"></attribute>
+
+    			<attribute name="link1" type="https://bouilledegrenouille.typepad.fr/"></attribute>
+    			<attribute name="link1" type="http://petiteracine.net/wordpress/"></attribute>
+    			<attribute name="link1" type="http://jamais-de-la-vie.over-blog.com/"></attribute>
+   				<attribute name="link1" type="http://duplombdanslaile.canalblog.com/"></attribute>
+   				<attribute name="link1" type="http://maplumesurlacommode.blogspot.com/"></attribute>
+<!-- blog avec liens prolifiques !-->
+
+    			<attribute name="link2" type="string"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

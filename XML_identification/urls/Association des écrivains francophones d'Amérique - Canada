@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="https://ecrivainsfrancophones.wordpress.com/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Victor Barbeau"/>
+        <element name="rolename" type="fondateur de l'association"/>
+        <element name="personname" type="Jean Bruchési"/>
+        <element name="rolename" type="co-fondateur de l'association"/>
+        <element name="personname" type="Gino Levesque"/>
+        <element name="rolename" type="président de l'association"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="Mots en liberté. Anthologie 2013 des Écrivains francophones d’Amérique"/>
+        <element name="publicationtype" type="livre papier"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="rencontre d'auteur"/>
+        <element name="date" type="18 avril 2017"/>
+        <element name="responsible" type="string"/>
+        <element name="location" type="Café de Da de la Bibliothèque Ahuntsic, Montréal"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

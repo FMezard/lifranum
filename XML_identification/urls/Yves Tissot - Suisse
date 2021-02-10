@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://yvestissot.blogspot.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.partagedehaikus.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://blog.ossiane.photo/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="http://www.100pour100haiku.fr/ploc/la%20lettre%20du%20haiku%20ploc20-association%20pour%20la%20promotion%20du%20haiku.pdf"/>
+                  <enumeration value="http://mainichi.jp/english/english/features/haiku/etc/pdf/MainichiHaikuContest2008.pdf"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong15.pdf"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

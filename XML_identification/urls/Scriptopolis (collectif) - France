@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/collectiveauthor" xmlns:tns="http://www.example.org/collectiveauthor" elementFormDefault="qualified">
+
+    <complexType name="webpresence">
+    	<sequence>
+    		<element name="siteblog" type="http://www.scriptopolis.fr/"></element>
+    		<element name="socialnetworks" type="https://www.facebook.com/scriptopolis/"></element>
+    		<element name="community" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="author">
+    	<sequence>
+    		<element name="name" type="Marie Alauzen"></element>
+    		<element name="occupation" type="auteure"></element>
+    		<element name="name" type="Jérôme Denis"></element>
+    		<element name="occupation" type="auteur"></element>
+    		<element name="name" type="David Pontille"></element>
+    		<element name="occupation" type="auteur"></element>
+    		<element name="name" type="Didier Torny"></element>
+    		<element name="occupation" type="auteur"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="durée indéterminée, début : 2009, en cours : 2020"></complexType>
+
+    <complexType name="manifestation">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="date" type="string"></element>
+    		<element name="responsable" type="string"></element>
+    		<element name="location" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="publication">
+    	<sequence>
+    		<element name="name" type="Scriptopolis"></element>
+    		<element name="publicationtype" type="livre (Editions Non Standard) "></element>
+    	</sequence>
+    </complexType>
+    
+     <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

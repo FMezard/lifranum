@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://verrementhe.blogspirit.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://laboucheaoreilles.wordpress.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://la_cause_des_causeuses.typepad.com/a_cause_des_causeuses/"/>
+                  <enumeration value="http://www.alaincrozier.com/accueil.html"/>
+                  <enumeration value="http://jecritures.blogspot.com/"/>
+                  <enumeration value="https://www.guylaine-carrot.com/"/>
+                  <enumeration value="http://jjmarimbert.blogspot.com/"/>
+                  <enumeration value="https://www.dechargelarevue.com/"/>
+                  <enumeration value="http://luminitzatigirlas.eklablog.com/"/>
+                  <enumeration value="https://laboucheaoreilles.wordpress.com/"/>
+                  <enumeration value="http://luminitzatigirlas.eklablog.com/"/>
+                  <enumeration value="hhttp://murielecamac.blogspot.com/"/>
+                  <enumeration value="https://www.terreaciel.net/"/>
+                  <enumeration value="http://sbns.eklablog.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.facebook.com/valerie.canatdechizy"/>
+                  <enumeration value="https://issuu.com/revuecequireste/docs/nuit_-_val_rie_canat_de_chizy___col"/>
+                  <enumeration value="https://www.dailleurspoesie.com/chroniques-de-valeacuterie-canat-de-chizy.html"/>
+                  <enumeration value="https://www.terreaciel.net/Lus-et-approuves-octobre-2018-par-Valerie-Canat-de-Chizy?fbclid=IwAR1DckY76eWcQXQB-d6vMj2bmNy_ecpbag73LM11WAbOydSpz_psEPxlrJ8#.W9louoqNwdW"/>
+                  <enumeration value="https://terresdefemmes.blogs.com/mon_weblog/2019/06/val%C3%A9rie-canat-de-chizy-po%C3%A9sie-quand-le-vert.html"/>
+                  <enumeration value="http://lesmotsplusgrandsquenous.over-blog.com/2014/07/valerie-canat-de-chizy-poemes.html"/>
+                  <enumeration value="http://coincidencespoetiques.fr/2019/06/25/valerie-canat-de-chizy/"/>
+                  <enumeration value="https://www.babelio.com/auteur/Valerie-Canat-de-Chizy/399487"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

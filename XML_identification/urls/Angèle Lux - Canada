@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="https://www.facebook.com/angele.lux.poete/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://short-edition.com/fr/auteur/solenn-emmvrique-1?page=2"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.facebook.com/angele.lux.artiste/"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://www.facebook.com/jean.yvon.10/"/>
+                  <enumeration value="https://www.facebook.com/jeanlouis.chartrain"/>
+                  <enumeration value="https://www.facebook.com/millelirim"/>
+                  <enumeration value="https://www.facebook.com/jiscaqc/"/>
+<!-- liens non renseignés ici vers groupes Facebook privé et public d'haïkus !-->
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong53.pdf"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong55.pdf"/>
+                  <enumeration value="http://mtpham75.free.fr/haiku/Gong-47.pdf"/>
+                  <enumeration value="https://www.thehaikufoundation.org/omeka/files/original/234b6db72f5b93982413cf88bb187f20.pdf"/>
+                 <enumeration value="http://mainichi.jp/english/english/features/haiku/etc/pdf/MainichiHaikuContest2008.pdf"/>
+                 <enumeration value="http://www.100pour100haiku.fr/ploc/la%20lettre%20du%20haiku%20ploc7-association%20pour%20la%20promotion%20du%20haiku.pdf"/>
+                 <enumeration value="http://www.tempslibres.org/tl/fr/centre.php#base"/>
+                 <enumeration value="http://expression.free.fr/poesie/indauteur.php?cleauteur=lux"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

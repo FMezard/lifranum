@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="https://www.facebook.com/kevin.broda.7"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.facebook.com/profile.php?id=100005125118007"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="http://kevin-broda-poete.over-blog.com/"/>
+                  <enumeration value="http://www.le-capital-des-mots.fr/2018/02/le-capital-des-mots-kevin-broda.html?fbclid=IwAR1pY-tbsY8zE21i2Et40z8aAGC2QlFbJkX3SCPVFoSNfac43v3zCwUuEz4"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://www.facebook.com/profile.php?id=100005125118007"/>
+                  <enumeration value="https://www.facebook.com/perrin.langda"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="http://www.100pour100haiku.fr/revue_ploc/Ploc_revue_haiku_numero_31.pdf"/>
+                  <enumeration value="https://fr.calameo.com/read/003669245603e92b6509a"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong37.pdf"/>
+                  <enumeration value="http://mtpham75.free.fr/haiku/Ploc_revue_haiku_numero_32.pdf"/>
+                  <enumeration value="https://www.thehaikufoundation.org/omeka/files/original/e32adafdb522d382460841904087a506.pdf"/>
+                  <enumeration value="http://doczz.fr/doc/38514/gong-39---association-francophone-de-ha%C3%AFku"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

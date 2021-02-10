@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="http://lesmotsplusgrandsquenous.over-blog.com/">
+
+    	<attribute name="provenance" type="http://verrementhe.blogspirit.com/"></attribute>
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Le comité poétique (inconnu)"/>
+        <element name="rolename" type="rédacteurs"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="string"/>
+        <element name="publicationtype" type="string"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="string"/>
+        <element name="date" type="string"/>
+        <element name="responsible" type="string"/>
+        <element name="location" type="string"/>
+      </simpleType>
+  </complexType>
+
+      <complexType name="library">
+    	<sequence>
+    		<element name="network" type="string"></element>
+    		<element name="catalog" type="https://biendesmotsencore.blogspot.com/"></element>
+    	</sequence>
+    </complexType>
+</schema>

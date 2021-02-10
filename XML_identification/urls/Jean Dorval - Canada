@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://lepoetejeandorval.blogspot.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.partagedehaikus.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="http://www.cirrustanka.com/issues/1_Cirrus_printemps_2014.pdf"/>
+                  <enumeration value="http://www.cirrustanka.com/issues/2_Cirrus_automne_2014.pdf"/>
+                  <enumeration value="http://www.cirrustanka.com/issues/3_Cirrus_printemps_2015.pdf"/>
+                  <enumeration value="http://www.cirrustanka.com/issues/4_Cirrus_ete_2015.pdf"/>
+                  <enumeration value="http://www.cirrustanka.com/issues/9_Cirrus_printemps_2018.pdf"/>
+                  <enumeration value="http://www.100pour100haiku.fr/ploc/la%20lettre%20du%20haiku%20ploc8-association%20pour%20la%20promotion%20du%20haiku.pdf"/>
+                  <enumeration value="http://ose-art.ca/RevuePoesie/RevuePoesie3.pdf"/>
+                  <enumeration value="http://ose-art.ca/RevuePoesie/RevuePoesie4.pdf"/>
+                  <enumeration value="http://ose-art.ca/RevuePoesie/RevuePoesie5.pdf"/>
+                  <enumeration value="https://rappelparolecreation.org/concours-litteraires-ambassadeurs-de-rivieres/la-riviere-saint-charles-minspire-2017-concours-litteraire-ambassadeur-de-riviere/"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://lalitoutsimplement.com/"/>
+                  <enumeration value="http://pages.infinit.net/haiku/"/>
+                  <enumeration value="http://kukai.paris.free.fr/blog/"/>
+                  <enumeration value="https://www.facebook.com/kukaidequebec/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong13.pdf"/>
+                  <enumeration value="http://thehaikufoundation.org/omeka/files/original/d1aca1d6b375d8c156c5498407b4a277.pdf"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

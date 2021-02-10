@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://surlatraceduvent.blogspot.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://vincent-calebasse.blogspot.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.cequireste.fr/lydia-padellec-renaud-allirand/"/>
+                  <enumeration value="http://revueverso.blogspot.com/2019/12/verso-n179-ici-ailleurs.html"/>
+                  <enumeration value="https://www.terreaciel.net/La-Lune-bleue#.Xo2LzdLLhPZ"/>
+                  <enumeration value="https://www.cequireste.fr/lydia-padellec/"/>
+                  <enumeration value="http://poemes-galway-lorient.weebly.com/lydia-padellec-deux-poegravemes.html"/>
+                  <enumeration value="http://revueverso.blogspot.com/2014/10/port-louis-800x600-normal-0-21-false.html"/>
+                  <enumeration value="https://www.terreaciel.net/Lydia-Padellec#.Xo2PyNLLhPY"/>
+                  <enumeration value="http://www.incertainregard.fr/Revue/INCERTAINREGARDN8.pdf"/>
+                  <enumeration value="http://remue.net/lydia-padellec-a-la-lanterne-rambouillet-78"/>
+                  <enumeration value="https://www.poesie-en-liberte.fr/janvier-2019-lydia-padellec/"/>
+                  <enumeration value="https://www.youtube.com/watch?v=nszYuAA2cR4"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://le-blog-de-kiro.over-blog.com/"/>
+                  <enumeration value="http://carnets-haijin.blogspot.com/"/>
+                  <enumeration value="http://kukai.paris.free.fr/blog/index.php"/>
+                  <enumeration value="http://haikuduvidetdelaplenitude.blogspot.com/"/>
+                  <enumeration value="http://poullaouec-jac.blogspot.com/"/>
+                  <enumeration value="http://vincent-calebasse.blogspot.com/"/>
+                  <enumeration value="http://philquinta.canalblog.com/"/>
+                  <enumeration value="http://soizic-michelot.blogspot.com/"/>
+                  <enumeration value="http://revue17secondes.blogspot.com/"/>
+                  <enumeration value="http://revueverso.blogspot.com/"/>
+                  <enumeration value="https://www.cequireste.fr/"/>
+                  <enumeration value="https://sites.google.com/site/revuepaysagesecrits/"/>
+                  <enumeration value="http://www.incertainregard.fr/"/>
+                  <enumeration value="https://www.terreaciel.net/"/>
+                  <enumeration value="https://www.recoursaupoeme.fr/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://pierresel.typepad.fr/la-pierre-et-le-sel/2012/06/un-entretien-avec-lydia-padellec.html"/>
+                  <enumeration value="https://www.babelio.com/auteur/Lydia-Padellec/133350"/>
+                  <enumeration value="https://www.lemanoirdespoetes.fr/poemes-lydia-padellec.php"/>
+                  <enumeration value="http://www.100pour100haiku.fr/ploc/la%20lettre%20du%20haiku%20ploc71-association%20pour%20la%20promotion%20du%20haiku.pdf"/>
+                  <enumeration value="https://terresdefemmes.blogs.com/mon_weblog/2012/06/lydia-padellec-la-m%C3%A8re.html"/>
+                  <enumeration value="https://www.revue-tanka-francophone.com/revue-tanka/lettre-ploc77.pdf"/>
+                  <enumeration value="http://www.thehaikufoundation.org/omeka/files/original/a66672d2dec80484ba68cad203526847.pdf"/>
+                  <enumeration value="http://www.incertainregard.fr/Archives/Archives/IR%20N%2010.pdf"/>
+                  <enumeration value="http://lebolvide.over-blog.com/article-28335501.html"/>
+                  <enumeration value="http://incertainregard.com/wp-content/uploads/2015/06/INCERTAINREGARDN6A.pdf"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

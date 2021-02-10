@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="http://coincidencespoetiques.fr/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Chantal Ravel"/>
+       <element name="personname" type="Michel Bret"/>
+       <element name="personname" type="Georges Chich"/>
+        <element name="rolename" type="fondateurs"/>
+
+        <element name="personname" type="Geneviève Vidal"/>
+        <element name="personname" type="Marie-Ange Sebasti"/>
+        <element name="personname" type="Marie-Thérèse Peyrin"/>
+        <element name="personname" type="Isabelle Poncet-Rimaud"/>
+        <element name="personname" type="Anne-Lise Blanchard"/>
+        <element name="personname" type="Barbara Le Moëne"/>
+        <element name="rolename" type="poètes adhérents"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="Textes de Claude Andruetan"/>
+        <element name="publicationtype" type="anthologie"/>
+        <element name="name" type="Textes de Gabriel Le Gal"/>
+        <element name="publicationtype" type="anthologie"/>
+        <element name="name" type="Textes d'André Rochedy"/>
+        <element name="publicationtype" type="anthologie en ligne"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="Rencontre Les coïncidences"/>
+        <element name="date" type="5 novembre 2019"/>
+        <element name="responsible" type="Chantal Raval Michel Bret et Georges Chich"/>
+        <element name="location" type="Médiathèque Mémo d'Oullins Lyon"/>
+      </simpleType>
+  </complexType>
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

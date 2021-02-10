@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://vincent-calebasse.blogspot.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://simplicitehaiku.blogspot.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://carnets-haijin.blogspot.com/"/>
+                  <enumeration value="http://k1-ka.blogspot.com/"/>
+                  <enumeration value="http://surlatraceduvent.blogspot.com/"/>
+                  <enumeration value="http://philquinta.canalblog.com/"/>
+                  <enumeration value="http://haikuduvidetdelaplenitude.blogspot.com/"/>
+                  <enumeration value="http://haiku-calligraphie.blogspot.com/"/>
+                  <enumeration value="http://haiku-senryu.over-blog.net/"/>
+                  <enumeration value="http://patpantin.over-blog.com/"/>
+                  <enumeration value="http://texte.over-blog.com/"/>
+                  <enumeration value="http://dresseurs-de-pierres.over-blog.com/"/>
+                  <enumeration value="http://leblog-zen.blogspot.com/"/>
+                  <enumeration value="http://coralieberhault.over-blog.com/"/>
+                  <enumeration value="https://pasteack.typepad.fr/"/>
+                  <enumeration value="http://www.chichinpuipui.fr/"/>
+                  <enumeration value="http://mimiclectik.canalblog.com/"/>
+                  <enumeration value="https://haicourtoujours.wordpress.com/"/>
+                  <enumeration value="http://mohe.xanga.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong39.pdf"/>
+                  <enumeration value="http://mtpham75.free.fr/haiku/Gong-37.pdf"/>
+                  <enumeration value="https://www.revue-tanka-francophone.com/revue-tanka/RTF13-juin-2011.pdf"/>
+                  <enumeration value="http://thehaikufoundation.org/omeka/files/original/d34f326dd0303ccc70530eeb075c4d99.pdf"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

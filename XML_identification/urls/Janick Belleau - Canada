@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="https://janickbelleau.ca/fr/accueil.php"></element>
+<!-- site personnel avec des liens PDF prolifiques !-->
+    			</sequence>
+    			<attribute name="provenance" type="https://dianedxxx.wixsite.com/dianedescoteaux"></attribute>
+
+    			<attribute name="link0" type="string"></attribute>
+
+    		<attribute name="link1" type="http://www.auteursmonteregie.com/mission.html"></attribute>
+    		<attribute name="link1" type="http://association-francophone-haibun.com/"></attribute>
+   			<attribute name="link1" type="http://pages.infinit.net/haiku/"></attribute>
+   			<attribute name="link1" type="http://www.tempslibres.org/"></attribute>
+   			<attribute name="link1" type="https://haikucanada.org/"></attribute>
+   			<attribute name="link1" type="http://www.tempslibres.org/"></attribute>
+   			<attribute name="link1" type="http://www.100pour100haiku.fr/"></attribute>
+   			<attribute name="link1" type="https://www.association-francophone-de-haiku.com/"></attribute>
+   			<attribute name="link1" type="https://sites.google.com/site/groupehaikumontreal/home/"></attribute>
+   			<attribute name="link1" type="http://www.cirrustanka.com/accueil.php"></attribute>
+   			<attribute name="link1" type="http://www.revue-tanka-francophone.com/"></attribute>
+
+    			<attribute name="link2" type="https://www.revue-tanka-francophone.com/revue-tanka/Du_tanka_traduit_ecrit_publie_en_francais_1871_2013.pdf"></attribute>
+    			<attribute name="link2" type="https://terebess.hu/english/haiku/JanickBelleau-fr.pdf"></attribute>
+    			<attribute name="link2" type="https://haikucanada.org/resources/articles/5.pdf"></attribute>
+    			<attribute name="link2" type="http://mtpham75.free.fr/haiku/Gong-31.pdf"></attribute>
+    			<attribute name="link2" type="https://www.yumpu.com/fr/document/read/39843008/gong-22-association-francophone-de-haiku"></attribute>
+    			<attribute name="link2" type="http://sansfo.o2switch.net/IMG/pdf/rtf9-fevrier-2010.pdf"></attribute>
+    			<attribute name="link2" type="https://issuu.com/danieleduteil/docs/l_echo_de_l_etroit_chemin_n___23_ao"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

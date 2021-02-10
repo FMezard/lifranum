@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="http://association-francophone-haibun.com/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Danièle Duteil"/>
+        <element name="rolename" type="présidente"/>
+        <element name="personname" type="Michel Duteil"/>
+        <element name="rolename" type="secrétaire"/>
+        <element name="personname" type="Germain Rehlinger"/>
+        <element name="rolename" type="trésorier"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="L'écho de l'étroit chemin"/>
+        <element name="publicationtype" type="journal trimestriel"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="Rencontre écriture"/>
+        <element name="date" type="du 15 au 17 mars 2019"/>
+        <element name="responsible" type="AFAH"/>
+        <element name="location" type="Montbouy Centre Val de Loire"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

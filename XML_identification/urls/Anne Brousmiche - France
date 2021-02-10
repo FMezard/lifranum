@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+           <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://www.anne-brousmiche.fr/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://afdj.over-blog.com/"/>
+                  <enumeration value="http://bourgeonssouslaneige.over-blog.com/"/>
+                  <enumeration value="http://le-blog-de-kiro.over-blog.com/"/>
+                 <enumeration value="https://grazielladupuy0037.wixsite.com/spirit-of-haikus"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong51.pdf"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong37.pdf"/>
+                  <enumeration value="http://www.100pour100haiku.fr/revue_ploc/ploc_revue_haiku_numero_72.pdf"/>
+                 <enumeration value="https://fr.calameo.com/read/003669245603e92b6509a"/>
+                 <enumeration value="http://www.100pour100haiku.fr/ploc/la%20lettre%20du%20haiku%20ploc84-association%20pour%20la%20promotion%20du%20haiku.pdf"/>
+                 <enumeration value="http://mtpham75.free.fr/haiku/Gong-55.pdf"/>
+                 <enumeration value="https://www.thehaikufoundation.org/omeka/files/original/234b6db72f5b93982413cf88bb187f20.pdf"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

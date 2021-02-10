@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://insula.over-blog.net/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://lafreniere.over-blog.net/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://claudeartes.fr/Artes/"/>
+                  <enumeration value="http://brunoodile.canalblog.com/"/>
+                  <enumeration value="https://angedemarchi.wixsite.com/"/>
+                  <enumeration value="http://michelhezard.over-blog.com/"/>
+                  <enumeration value="http://lessansciel.hautetfort.com/"/>
+                 <enumeration value="http://emmila.canalblog.com/"/>
+                 <enumeration value="http://www.guyjean.com/"/>
+                 <enumeration value="http://lafreniere.over-blog.net/"/>
+                 <enumeration value="http://christianeloubier.com/"/>
+                 <enumeration value="http://chevalfou.over-blog.net/"/>
+                 <enumeration value="http://jeanpierrevaissaire.over-blog.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.babelio.com/auteur/Ile-Eniger/322747"/>
+                  <enumeration value="http://www.francopolis.net/francosemailles/IleEniger.html"/>
+                  <enumeration value="http://www.francopolis.net/salon/IleEniger.htm"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

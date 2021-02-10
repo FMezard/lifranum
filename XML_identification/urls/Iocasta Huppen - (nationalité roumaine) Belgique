@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://www.haikus-iocasta.be/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://simplicitehaiku.blogspot.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.youtube.com/channel/UCFNAf9rA1V7kqk8M4uSewuQ"/>
+                  <enumeration value="https://www.facebook.com/iocasta.huppen"/>
+                  <enumeration value="http://www.le-capital-des-mots.fr/2020/01/le-capital-des-mots-iocasta-huppen.html"/>
+                  <enumeration value="https://lichen-poesie.blogspot.com/p/iocasta-huppen_28.html"/>
+
+
+        <attribute name="link1" type="string"/>
+                 <enumeration value="https://www.youtube.com/watch?v=FGZmHi1ADho"/>
+               <enumeration value="www.partagedehaikus.com"/>
+               <enumeration value="http://amalgamdehaiku.blogspot.ro/"/>
+               <enumeration value="http://dfshaiku.blogspot.ch"/>
+               <enumeration value="http://audreygourjon.blogspot.fr/"/>
+               <enumeration value="https://alainhenry.blog/"/>
+               <enumeration value="hhttps://marcelpeltier.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.revue-tanka-francophone.com/revue-tanka/lettre-ploc77.pdf"/>
+                  <enumeration value="http://mtpham75.free.fr/haiku/Gong-51.pdf"/>
+                  <enumeration value="http://www.tempslibres.org/"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="https://short-edition.com/fr/auteur/iocasta-huppen"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

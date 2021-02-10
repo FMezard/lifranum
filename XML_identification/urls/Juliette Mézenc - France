@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="https://motmaquis.net/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="string"></attribute>
+
+    			<attribute name="link1" type="http://petiteracine.net/wordpress/"></attribute>
+    			<attribute name="link1" type="http://www.liminaire.fr/"></attribute>
+    			<attribute name="link1" type="http://www.tierslivre.net/"></attribute>
+<!-- site personnel à liens prolifiques !-->
+
+    			<attribute name="link2" type="http://juliette.mezenc.over-blog.com/"></attribute>
+    			<attribute name="link2" type="https://diacritik.com/2019/06/05/juliette-mezenc-le-monde-ne-va-pas-de-soi-des-especes-de-dissolution/"></attribute>
+    			<attribute name="link2" type="https://twitter.com/juliettemezenc"></attribute>
+    			<attribute name="link2" type="https://www.facebook.com/juliette.mezenc"></attribute>
+    			<attribute name="link2" type="https://semenoir.typepad.fr/semenoir/2012/07/juliette-mezenc-la-baleine-c-est-moi-vasesco.html"></attribute>
+    			<attribute name="link2" type="https://cousumain.wordpress.com/2011/06/03/cousu-main-accueille-juliette-mezenc/"></attribute>
+    			<attribute name="link2" type="http://petiteracine.over-blog.com/article-nos-bibliotheques-tiennent-sur-nos-paumes-juliette-mezenc-38706781.html"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

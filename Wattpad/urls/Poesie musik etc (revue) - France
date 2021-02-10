@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="https://poesiemuziketc.wordpress.com/">
+    	<sequence>
+    		<element name="publicationtype" type="revue numérique de poésie"></element>
+    		<element name="format" type="Calameo"></element>
+    		<element name="regularity" type="a-périodique"></element>
+    		<element name="responsiblename" type="Christophe Bregaint"></element>
+    		<element name="responsiblename" type="Damien Paisant"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="plateform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+</schema>

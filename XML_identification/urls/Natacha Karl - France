@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="https://www.natachakarl.com/jardiniere-des-mots"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.partagedehaikus.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://soundcloud.com/natacha-karl"/>
+                  <enumeration value="https://www.instagram.com/natacha_haiku/"/>
+                  <enumeration value="https://www.pinterest.fr/cecilenatacha/"/>
+                  <enumeration value="http://heurebleuepoesie.canalblog.com/"/>
+                  <enumeration value="https://www.facebook.com/natachakarl.artiste/"/>
+
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://www.majuscrit.fr/fugue_bijou.pdf"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="http://lesmotsdenatacha.overblog.com/"/>
+                  <enumeration value="http://welovewords.com/natacha-k"/>
+                  <enumeration value="http://mtpham75.free.fr/haiku/Gong-53.pdf"/>
+                  <enumeration value="http://association-francophone-haibun.com/wp-content/uploads/2019/08/ECHO-29-ao%C3%BBt-2019.pdf"/>
+                 <enumeration value="https://fr.calameo.com/read/002027389fc33832af2b3"/>
+                  <enumeration value="http://www.tempslibres.org/tl/fr/centre.php#base"/>
+
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="https://www.babelio.com/auteur/Natacha-Karl/416969"/>
+                  <enumeration value="https://vivrenpoesie.com/en-communion-avec-la-nature/"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

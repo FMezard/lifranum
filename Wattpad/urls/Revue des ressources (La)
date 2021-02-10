@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="https://www.larevuedesressources.org/">
+    	<sequence>
+    		<element name="publicationtype" type="Revue culturelle pluridisciplinaire"></element>
+    		<element name="format" type="html"></element>
+    		<element name="regularity" type="a-périodique"></element>
+    		<element name="responsiblename" type="Robin Hunzinger "></element>
+    		<element name="responsiblename" type="Bernard Gauthier "></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="plateform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+</schema>

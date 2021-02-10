@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://denisheudre.free.fr/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="https://cheminsbattus.wordpress.com/"></attribute>
+
+    			<attribute name="link0" type="http://dheudre.over-blog.com/"></attribute>
+    			<attribute name="link0" type="https://www.facebook.com/denis.heudre"></attribute>
+
+    			<attribute name="link1" type="https://www.recoursaupoeme.fr/"></attribute>
+    			<attribute name="link1" type="https://poezibao.typepad.com/poezibao/"></attribute>
+    			<attribute name="link1" type="http://guyallixpoesie.canalblog.com/"></attribute>
+    			<attribute name="link1" type="http://jancet.blogg.org/"></attribute>
+    			<attribute name="link1" type="http://france.burghellerey.over-blog.com/"></attribute>
+    			<attribute name="link1" type="http://ericdubois.over-blog.fr/"></attribute>
+    			<attribute name="link1" type="http://terreaciel.free.fr/"></attribute>
+    			<attribute name="link1" type="http://www.patrick-joquel.com/"></attribute>
+    			<attribute name="link1" type="https://jacquesjosse.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://www.maulpoix.net/"></attribute>
+    			<attribute name="link1" type="http://surlatraceduvent.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://corinne.pluchart.over-blog.com/"></attribute>
+    			<attribute name="link1" type="http://friches-et-appentis.blogspot.com/"></attribute>
+    			<attribute name="link1" type="https://cheminsbattus.wordpress.com/"></attribute>
+    			<attribute name="link1" type="http://etc-iste.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://revue17secondes.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://www.le-capital-des-mots.fr/"></attribute>
+    			<attribute name="link1" type="http://www.francopolis.net/"></attribute>
+    			<attribute name="link1" type="https://lapageblanche.com/"></attribute>
+    			<attribute name="link1" type="http://courttoujours.hautetfort.com/"></attribute>
+    			<attribute name="link1" type="https://sites.google.com/site/revuepaysagesecrits/"></attribute>
+    			<attribute name="link1" type="https://www.terreaciel.net/"></attribute>
+    			<attribute name="link1" type="http://revue-texture.fr/"></attribute>
+    			<attribute name="link1" type="http://traction-brabant.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://alain-cotten.over-blog.com/"></attribute>
+
+    			<attribute name="link2" type="http://jean.dif.free.fr/"></attribute>
+    			<attribute name="link2" type="https://twitter.com/denisheudre"></attribute>
+    			<attribute name="link2" type="http://orion.poesie.free.fr/"></attribute>
+
+    			<attribute name="link3" type="https://terresdefemmes.blogs.com/mon_weblog/"></attribute>
+    			<attribute name="link3" type="http://pierre.campion2.free.fr/index.html"></attribute>
+    			<attribute name="link3" type="http://temporel.fr/"></attribute>
+    			<attribute name="link3" type="http://www.beatrice-libert.be/"></attribute>
+    			<attribute name="link3" type="http://lafreniere.over-blog.net/"></attribute>
+    			<attribute name="link3" type="https://www.labyrinthiques.fr/"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

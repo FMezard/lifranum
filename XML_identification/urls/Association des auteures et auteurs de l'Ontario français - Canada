@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="https://aaof.ca/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Gabriel Osson"/>
+        <element name="rolename" type="président de l'association"/>
+        <element name="personname" type="Marie Josée Martin"/>
+        <element name="rolename" type="vice-présidente de l'association"/>
+        <element name="personname" type="Michèle Vinet"/>
+        <element name="rolename" type="secrétaire-trésorière"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="Participe présent"/>
+        <element name="publicationtype" type="bulletin en ligne"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="Prix Emergence AAOF de littérature"/>
+        <element name="date" type="remise des prix 24 mai 2019"/>
+        <element name="responsible" type="AAOF"/>
+        <element name="location" type="Ottawa"/>
+
+        <element name="name" type="Festival de poésie VERSeFest"/>
+        <element name="date" type="24 mars 2015"/>
+        <element name="responsible" type="Monty Reid, directeur du festival"/>
+        <element name="location" type="Ottawa"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

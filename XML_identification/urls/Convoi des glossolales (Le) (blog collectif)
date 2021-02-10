@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/collectiveauthor" xmlns:tns="http://www.example.org/collectiveauthor" elementFormDefault="qualified">
+
+    <complexType name="webpresence">
+    	<sequence>
+    		<element name="siteblog" type="http://leconvoidesglossolales.blogspot.com/"></element>
+    		<element name="socialnetworks" type="string"></element>
+    		<element name="community" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="author">
+    	<sequence>
+    		<element name="name" type="anthony poiraudeau"></element>
+    		<element name="occupation" type="fondateur"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="2009 - 2014"></complexType>
+
+    <complexType name="manifestation">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="date" type="string"></element>
+    		<element name="responsable" type="string"></element>
+    		<element name="location" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="publication">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="publicationtype" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

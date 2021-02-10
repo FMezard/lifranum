@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://afdj.over-blog.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://haishahaikudepat.canalblog.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="http://www.100pour100haiku.fr/revue_ploc/ploc_revue_haiku_numero_53.pdf"/>
+                  <enumeration value="https://association-francophone-de-haiku.com/wp-content/uploads/2019/03/GONG59.pdf"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong55.pdf"/>
+                  <enumeration value="http://christiane-ranieri.fr/sites/default/files/LALETTRE54Mars2019.pdf"/>
+                  <enumeration value="http://www.100pour100haiku.fr/revue_ploc/ploc_revue_haiku_numero_70.pdf"/>
+                  <enumeration value="http://kukai.paris.free.fr/blog/index.php?2015/10"/>
+                  <enumeration value="http://minhtriet.paris.free.fr/haiku/Ploc_revue_haiku_numero_49.pdf"/>
+                  <enumeration value="http://www.cirrustanka.com/issues/11_Cirrus_printemps_2019.pdf"/>
+                  <enumeration value="https://fr.slideshare.net/debeljackitatjana/ploc-revue-haikunumero46"/>
+                  <enumeration value="http://docplayer.fr/31815430-Revue-francophone-de-haiku-juillet-septembre-2013-n-40.html"/>
+                  <enumeration value="https://twitter.com/mariealicemaire"/>
+                  <enumeration value="https://www.facebook.com/marie.alice.maire"/>
+                  <enumeration value="https://www.facebook.com/peinturedelisy/"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

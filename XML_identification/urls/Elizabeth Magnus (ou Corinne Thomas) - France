@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="https://elizabeth-magnus.blog4ever.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.sandradulier.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://latelierdecrituredeminibulle.blogspot.com/"/>
+                 <enumeration value="https://www.marido-poesies-divers-formes.com/"/>
+                 <enumeration value="https://motamotetplus.blog4ever.com/"/>
+                 <enumeration value="https://soupirance.blog4ever.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.poeme-france.com/auteur/elizabeth-magnus/"/>
+                  <enumeration value="https://www.facebook.com/corinne.thomas.9231"/>
+                 <enumeration value="https://www.pinterest.fr/cmagnus2292/"/>
+                 <enumeration value="https://medium.com/@ThomasCorinne1"/>
+                 <enumeration value="https://twitter.com/thomascorinne1"/>
+                 <enumeration value="https://magnuselizabeth.tumblr.com/"/>
+                 <enumeration value="https://www.wattpad.com/story/103605579-elizabeth-magnus"/>
+                <enumeration value="https://short-edition.com/fr/auteur/corinne-elizabeth-magnus-auteur"/>
+
+        <attribute name="link3" type="string"/>
+                <enumeration value="https://issuu.com/sandradulierauteur/docs/au_coin_du_po__me_juillet_2016"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

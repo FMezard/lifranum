@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://etc-iste.blogspot.com/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="https://www.facebook.com/kevin.broda.7"></attribute>
+
+    			<attribute name="link0" type="http://bibliothomasvinau.blogspot.com/"></attribute>
+    			<attribute name="link0" type="http://portraitspatates.blogspot.com/"></attribute>
+    			<attribute name="link0" type="http://fishfs.blogspot.com/"></attribute>
+    			<attribute name="link0" type="http://www.ventscontraires.net/recherche.cfm/tags/17070/clochards_celestes.html"></attribute>
+   				<attribute name="link0" type="http://reponsessauveesduvent.blogspot.com/"></attribute>
+   				<attribute name="link0" type="http://www.monsieurtoussaintlouverture.net/Histoiresetnouvelles.html"></attribute>
+
+    			<attribute name="link1" type="string"></attribute>
+  <!--site à liens prolifiques !-->
+
+    			<attribute name="link2" type="https://remue.net/Thomas-Vinau-Chantier"></attribute>
+    			<attribute name="link2" type="https://www.youtube.com/watch?v=bG1tSj68bT8"></attribute>
+    			<attribute name="link2" type="https://twitter.com/thomasvinau?lang=fr"></attribute>
+    			<attribute name="link2" type="http://www.poetika17.com/touslespoemes-6.html"></attribute>
+    			<attribute name="link2" type="http://biloba.over-blog.com/article-poeme-53656931.html"></attribute>
+    			<attribute name="link2" type="https://laviemanifeste.com/archives/13347"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://gregoiredamon.hautetfort.com/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.realpoetik.fr/"></attribute>
+
+    			<attribute name="link0" type="https://soundcloud.com/user-213738942"></attribute>
+
+    			<attribute name="link1" type="http://www.realpoetik.fr/"></attribute>
+    			<attribute name="link1" type="http://armand.le.poete.free.fr/"></attribute>
+    			<attribute name="link1" type="http://www.beatricebrerot.net/"></attribute>
+    			<attribute name="link1" type="http://sarieloubal.blogspot.com/"></attribute>
+    			<attribute name="link1" type="http://bnoval.hautetfort.com/"></attribute>
+<!-- blog à liens prolifiques !-->
+
+    			<attribute name="link2" type="https://www.youtube.com/watch?v=r7PU9ATr1fI"></attribute>
+    			<attribute name="link2" type="https://foutouart.fr/gregoire-damon/"></attribute>
+    			<attribute name="link2" type="http://remue.net/Gregoire-Damon-Mon-vrai-boulot"></attribute>
+    			<attribute name="link2" type="http://www.realpoetik.fr/2019/01/26/gregoire-damon-rouler-des-pelles/"></attribute>
+    			<attribute name="link2" type="http://foutou.art.over-blog.com/article-poesie-trajet-quotidien-par-gregoire-damon-122913612.html"></attribute>
+    			<attribute name="link2" type="http://sans-titres.com/numero1/oeuvre.php?numero=14"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

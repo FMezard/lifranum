@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="edition">
+    	<sequence>
+    		<element name="publicationtype" type="string"></element>
+    		<element name="format" type="string"></element>
+    		<element name="regularity" type="string"></element>
+    		<element name="responsiblename" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="http://lecerumen.blogspot.com/">
+    		<element name="publicationtype" type="plateforme collective de publication de poésies sonores"></element>
+    		<element name="responsiblename" type="Sammy Sapin"></element>
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+</schema>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://le-blog-de-kiro.over-blog.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://simplicitehaiku.blogspot.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://haikuduvidetdelaplenitude.blogspot.com/"/>
+                  <enumeration value="http://leblog-zen.blogspot.com/"/>
+                  <enumeration value="http://www.dominiquechipot.fr/"/>
+                  <enumeration value="http://haikuduvidetdelaplenitude.blogspot.com/"/>
+                  <enumeration value="http://leblog-zen.blogspot.com/"/>
+                  <enumeration value="http://www.dominiquechipot.fr/"/>
+                  <enumeration value="http://ahoui.eklablog.com/recent/2"/>
+                  <enumeration value="http://www.chichinpuipui.fr/"/>
+                  <enumeration value="http://bourgeonssouslaneige.over-blog.com/"/>
+                  <enumeration value="http://haiku-calligraphie.blogspot.com/"/>
+                  <enumeration value="http://carnets-haijin.blogspot.com/"/>
+                  <enumeration value="http://philquinta.canalblog.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://association-francophone-de-haiku.com/wp-content/uploads/2019/03/GONG59.pdf"/>
+                  <enumeration value="http://www.100pour100haiku.fr/revue_ploc/ploc_revue_haiku_numero_49.pdf"/>
+                  <enumeration value="https://www.thehaikufoundation.org/omeka/files/original/d28204c61f13b4ebb45c251c094861fe.pdf"/>
+                  <enumeration value="hhttp://kukai.paris.free.fr/blog/index.php"/>
+                  <enumeration value="http://biloba.over-blog.com/article-ch12-16-cueillir-101882377.html"/>
+                  <enumeration value="http://francais.agonia.net/index.php/press/14043550/Concours_de_haiku_2014"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

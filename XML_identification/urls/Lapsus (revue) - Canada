@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="https://lapsusulaval.wordpress.com/">
+    	<sequence>
+    		<element name="publicationtype" type="Revue de création littéraire"></element>
+    		<element name="format" type="PDF"></element>
+    		<element name="regularity" type="trimestrielle"></element>
+    		<element name="responsiblename" type="David Hétu"></element>
+    		<element name="responsiblename" type="Simon Beaulieu"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="plateform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+     <complexType name="library">
+    	<sequence>
+    		<element name="network" type="string"></element>
+    		<element name="catalog" type="https://www.facebook.com/LapsusULaval/"></element>
+    		<element name="catalog" type="https://www.instagram.com/la.revue.lapsus/?hl=fr-ca"></element>
+    		<element name="catalog" type="http://sdsecours.blogspot.com/"></element>
+    	</sequence>
+    </complexType>
+</schema>

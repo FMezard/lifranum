@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="https://heleneducauteur.wordpress.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.partagedehaikus.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="http://www.100pour100haiku.fr/ploc/la%20lettre%20du%20haiku%20ploc64-association%20pour%20la%20promotion%20du%20haiku.pdf"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://www.revue-tanka-francophone.com/"/>
+                  <enumeration value="http://www.dominiquechipot.fr/"/>
+                  <enumeration value="http://www.lelivredehaiku.fr/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://twitter.com/reveline02"/>
+                  <enumeration value="https://www.facebook.com/heleneducautricepageofficielle"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/wp-content/uploads/2018/04/revue-gong/Gong39.pdf"/>
+                  <enumeration value="http://mtpham75.free.fr/haiku/Gong-55.pdf"/>
+                  <enumeration value="https://fr.calameo.com/read/003669245603e92b6509a"/>
+                  <enumeration value="https://www.revue-tanka-francophone.com/revue-tanka/lettre-ploc77.pdf"/>
+                 <enumeration value="http://christiane-ranieri.fr/sites/default/files/LALETTRE41d%C3%A9cembre2015.pdf"/>
+                 <enumeration value="http://revuemeninge.com/wp-content/uploads/2018/02/RM_11_Numerique_v2.pdf"/>
+                 <enumeration value="http://doczz.fr/doc/38514/gong-39---association-francophone-de-ha%C3%AFku"/>
+                 <enumeration value="http://www.ral-m.com/revue/IMG/pdf_Ploc_revue_haiku_numero_17.pdf"/>
+                 <enumeration value="http://www.revue-secousse.fr/Secousse-13/Carte-blanche/Sks13-Neuves-Mouches.pdf"/>
+                  <enumeration value="http://vaucey.canalblog.com/archives/2015/09/01/32493329.html"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

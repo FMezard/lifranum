@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="https://www.facebook.com/poemesjfdeclercq/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="https://www.facebook.com/lettrealencre/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.facebook.com/jeanfrancois.declercq.7"/>
+                  <enumeration value="https://www.youtube.com/channel/UCBReB9IM29exXjkHkAC1Wrw"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://www.youtube.com/watch?v=9yBMDPoiMAU"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="http://data.over-blog-kiwi.com/1/23/33/99/20170531/ob_d95466_de-l-humain-pour-les-migrants-2-0.pdf"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

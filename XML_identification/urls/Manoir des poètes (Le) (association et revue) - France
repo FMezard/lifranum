@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="https://www.lemanoirdespoetes.fr/index.php">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Maggy de Coster"/>
+        <element name="rolename" type="fondatrice du manoire des poètes"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="Le Manoir des poètes"/>
+        <element name="publicationtype" type="revue semestrielle papier"/>
+
+        <element name="name" type="Le chant des villes"/>
+        <element name="publicationtype" type="anthologie de poésie papier"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="prix d'écriture du Manoir"/>
+        <element name="date" type="remise des prix 30 juin 2007"/>
+        <element name="responsible" type="Maggy de Coster"/>
+        <element name="location" type="Montmagny"/>
+
+        <element name="name" type="conférence sur Louise Michel"/>
+        <element name="date" type="31 mars et 1er avril 2007"/>
+        <element name="responsible" type="Maggy de Coster"/>
+        <element name="location" type="Montmagny"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

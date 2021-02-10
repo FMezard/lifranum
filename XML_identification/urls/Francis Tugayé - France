@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://bourgeonssouslaneige.over-blog.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://www.anne-brousmiche.fr/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="https://www.facebook.com/francis.tugaye"/>
+                  <enumeration value="https://twitter.com/FrancisTugaye"/>
+                  <enumeration value="https://www.facebook.com/groups/atelier.haiku/"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://www.association-francophone-de-haiku.com/"/>
+                  <enumeration value="http://www.100pour100haiku.fr/"/>
+                  <enumeration value="http://www.rolandhalbert.fr/"/>
+                  <enumeration value="http://grazielladupuy.over-blog.com/"/>
+                  <enumeration value="http://www.tempslibres.org/"/>
+                  <enumeration value="http://carnets-haijin.blogspot.com/"/>
+                  <enumeration value="http://www.chichinpuipui.fr/"/>
+                  <enumeration value="https://sites.google.com/site/creacecile/"/>
+                  <enumeration value="http://dresseurs-de-pierres.over-blog.com/"/>
+                  <enumeration value="http://pages.infinit.net/haiku/"/>
+                  <enumeration value="http://haikuduvidetdelaplenitude.blogspot.com/"/>
+                  <enumeration value="http://haikus-au-fil-des-jours.wifeo.com/"/>
+                  <enumeration value="http://www.big.or.jp/~loupe/links/fhisto/fhisinx.shtml"/>
+                  <enumeration value="http://louisevachon.blogspot.com/"/>
+                  <enumeration value="https://blog.ossiane.photo/"/>
+                  <enumeration value="http://www.dominiquechipot.fr/"/>
+                  <enumeration value="http://le-blog-de-kiro.over-blog.com/"/>
+                  <enumeration value="http://www.anne-brousmiche.fr/"/>
+                  <enumeration value="http://nekojita.free.fr/"/>
+                  <enumeration value="https://grazielladupuy0037.wixsite.com/spirit-of-haikus"/>
+                  <enumeration value="http://www.vieiletang.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.thehaikufoundation.org/omeka/files/original/f189f509b75feb84d55465d8bb679847.pdf"/>
+                  <enumeration value="https://www.yumpu.com/fr/document/read/17046452/ploc-la-revue-du-haiku-100-haiku"/>
+                  <enumeration value="http://www.francopolis.net/francosemailles/haikus-haigas-novembre2010.html"/>
+                  <enumeration value="http://www.ral-m.com/revue/IMG/pdf_Ploc_revue_haiku_numero_17.pdf"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

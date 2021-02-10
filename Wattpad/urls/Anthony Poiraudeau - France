@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://futilesetgraves.blogspot.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://leconvoidesglossolales.blogspot.com/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="http://remue.net/anthony-poiraudeau"/>
+                  <enumeration value="http://leconvoidesglossolales.blogspot.com/"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="http://www.àchatperché.net/spip/"/>
+                  <enumeration value="http://www.amboilati.org/"/>
+                  <enumeration value="http://d-fiction.fr//"/>
+                  <enumeration value="http://dreamlands-virtual-tour.blogspot.com/"/>
+                  <enumeration value="http://www.fricfracclub.com/"/>
+                  <enumeration value="http://hors-sol.net/revue/"/>
+                  <enumeration value="http://laguerretotale.blogspot.com/"/>
+                  <enumeration value="https://laurelimongi.com/"/>
+                  <enumeration value="http://la-marche-aux-pages.blogspot.com/"/>
+                  <enumeration value="https://materiaucomposite.wordpress.com/"/>
+                  <enumeration value="https://helenefrederick.com/"/>
+                  <enumeration value="http://petiteracine.net/wordpress/"/>
+                  <enumeration value="http://remue.net/spip.php?page=sommaire"/>
+                  <enumeration value="http://sebastienrongier.net/"/>
+                  <enumeration value="http://thereseramequin.blogspot.com/"/>
+                  <enumeration value="http://www.tierslivre.net/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="https://www.babelio.com/auteur/Anthony-Poiraudeau/263633"/>
+                  <enumeration value="https://twitter.com/apoiraudeau?lang=fr"/>
+                  <enumeration value="https://d-fiction.fr/2013/03/en-route-pour-pocerolandia/"/>
+                  <enumeration value="https://issuu.com/revue303/docs/303-157"/>
+                  <enumeration value="https://www.pariscilaculture.fr/2013/07/entretien-avec-anthony-poiraudeau-pour-projet-el-pocero/"/>
+                  <enumeration value="https://www.youtube.com/watch?v=DaUVnDu6umk"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+      <extension></extension>
+      <extension></extension>
+    </complexContent>
+  </complexType>
+</schema>

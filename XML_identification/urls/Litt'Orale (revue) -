@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="https://litt-orale.com/">
+    	<sequence>
+    		<element name="publicationtype" type="Revue sonore littéraire et artistique"></element>
+    		<element name="format" type="html"></element>
+    		<element name="regularity" type="a-périodique"></element>
+    		<element name="responsiblename" type="Lise Paco"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="plateform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="library">
+    	<sequence>
+    		<element name="network" type="string"></element>
+    		<element name="catalog" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

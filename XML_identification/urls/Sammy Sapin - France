@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+  
+  <complexType name="network">
+    <attribute name="description">
+      <simpleType>
+        <restriction base="string">
+          <enumeration value="personal/communautary"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="personal/personal"/>
+         <minLength value="0"/>
+
+          <maxLength value="1"/>
+          <enumeration value="value"/>
+        </restriction>
+      </simpleType>
+    </attribute>
+  </complexType>
+
+  <complexType name="facet">
+    <complexContent>
+      <extension base="tns:network">
+        <sequence>
+          <element name="webunit" type="string"/>
+                    <enumeration value="http://sammysapin.blogspot.com/"/>
+        </sequence>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://www.realpoetik.fr/"/>
+
+        <attribute name="link0" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="link1" type="string"/>
+                  <enumeration value="https://arnocalleja.tumblr.com/"/>
+                  <enumeration value="http://lecerumen.blogspot.com/"/>
+                  <enumeration value="http://sarieloubal.blogspot.com/"/>
+                  <enumeration value="https://poesiecritique.tumblr.com/"/>
+                  <enumeration value="http://courttoujours.hautetfort.com/"/>
+                  <enumeration value="http://www.ecampo.fr/"/>
+                  <enumeration value="http://lefeucentral.blogspot.com/"/>
+                  <enumeration value="http://houdaer.hautetfort.com/"/>
+                  <enumeration value="http://gregoiredamon.hautetfort.com/"/>
+                  <enumeration value="http://heptanesfraxion.blogspot.com/"/>
+                  <enumeration value="https://l-oeil-bande.blogspot.com/"/>
+                  <enumeration value="http://monnuage.free.fr/"/>
+                  <enumeration value="http://poesiechroniquetamalle.centerblog.net/"/>
+                  <enumeration value="http://poesieaccidentelle.blogspot.com/"/>
+                  <enumeration value="https://poesiebio.wordpress.com/"/>
+                  <enumeration value="http://phankimdien.blogspot.com/"/>
+                  <enumeration value="https://poemesale.com/"/>
+                  <enumeration value="https://soundcloud.com/user-385361917"/>
+                  <enumeration value="https://revuespam.wordpress.com/"/>
+                  <enumeration value="http://revuewatts.srwebworks.com/"/>
+                  <enumeration value="https://www.samantha-barendson.com/"/>
+                  <enumeration value="http://traction-brabant.blogspot.com/"/>
+                  <enumeration value="http://yvebressande.over-blog.com/"/>
+
+        <attribute name="link2" type="string"/>
+                  <enumeration value="http://www.realpoetik.fr/2016/03/25/sammy-sapin-la-vieille-pucellerie-male/"/>
+                  <enumeration value="https://www.facebook.com/profile.php?id=100010605660062"/>
+
+        <attribute name="link3" type="string"/>
+                  <enumeration value="value"/>
+
+        <attribute name="authorproject" type="hexBinary"/>
+                  <enumeration value="value"/>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="https://sites.google.com/site/groupehaikumontreal/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Geneviève Fillion"/>
+        <element name="rolename" type="directrice"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="string"/>
+        <element name="publicationtype" type="string"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="rencontre dans le cadre du Bazar du printemps"/>
+        <element name="date" type="7 mai 2017"/>
+        <element name="responsible" type="GHM"/>
+        <element name="location" type="Montréal"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

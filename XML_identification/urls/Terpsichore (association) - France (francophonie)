@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="http://www.poesie-terpsichore.eu/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Marie-Andrée Balbastre"/>
+        <element name="rolename" type="présidente de l'association"/>
+        <element name="personname" type="Marie-France Porcel"/>
+        <element name="rolename" type="trésorière"/>
+        <element name="personname" type="Georges Rabaroux"/>
+        <element name="rolename" type="trésorier-adjoint"/>
+        <element name="personname" type="Marianne Ferry"/>
+        <element name="rolename" type="secrétaire"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="2000 vers pour l'an 2000"/>
+        <element name="publicationtype" type="livre papier"/>
+
+        <element name="name" type="anthologie La beauté en poésie"/>
+        <element name="publicationtype" type="livre papier"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="concours poésie Terpsichore"/>
+        <element name="date" type="remise des prix mai 2020"/>
+        <element name="responsible" type="Marie Andrée Balbastre"/>
+        <element name="location" type="remise des prix à Paris"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

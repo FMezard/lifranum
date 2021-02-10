@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/support" xmlns:tns="http://www.example.org/support" elementFormDefault="qualified">
+
+    <complexType name="publicationform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+     <complexType name="https://www.lecastormagazine.com/">
+    	<sequence>
+    		<element name="publicationtype" type="magazine et fanzine féministe, LGBTQIA+"></element>
+    		<element name="format" type="html"></element>
+    		<element name="regularity" type="a-périodique"></element>
+    		<element name="responsiblename" type="Pam Méliee Sioux"></element>
+    	</sequence>
+    </complexType>
+
+        <attribute name="provenance" type="string"/>
+                  <enumeration value="http://mariannedesroziers.blogspot.com/"/>
+
+    <complexType name="plateform">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="forum">
+    	<complexContent>
+    		<extension base="tns:publicationform"></extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="library">
+    	<sequence>
+    		<element name="network" type="string"></element>
+    		<element name="catalog" type="https://www.facebook.com/LeCastorMagazine/"></element>
+    		<element name="catalog" type="https://twitter.com/lecastormag"></element>
+    		<element name="catalog" type="https://www.youtube.com/channel/UCg-XZnFYYQoQglU5VDS7CjQ"></element>
+    	</sequence>
+    </complexType>
+</schema>

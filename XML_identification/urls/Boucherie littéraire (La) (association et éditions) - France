@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="http://laboucherielitteraire.eklablog.fr/">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Antoine Gallardo"/>
+        <element name="rolename" type="fondateur de l'association"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="Quadrature de l'ephémère"/>
+        <element name="publicationtype" type="livre papier d'Hélène Dassavray"/>
+
+        <element name="name" type="Ne dites plus jamais c'est triste"/>
+        <element name="publicationtype" type="livre papier de Dominique Sampiero"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="Poésie nomade en Luberon"/>
+        <element name="date" type="14 décembre 2019"/>
+        <element name="responsible" type="Antoine Gallardo, la boucherie littéraire"/>
+        <element name="location" type="Lauris, France"/>
+
+        <element name="name" type="Les beaux jours de la petite édition"/>
+        <element name="date" type="2 et 3 avril 2016"/>
+        <element name="responsible" type="La boucherie littéraire et la mairie de Cadenet"/>
+        <element name="location" type="Cadenet, France"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

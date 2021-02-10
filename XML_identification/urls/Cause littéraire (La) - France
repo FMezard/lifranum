@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/community"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/community"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+
+  <element name="webunit" type="http://www.lacauselitteraire.fr">
+  </element>
+  <complexType  name="litterarycommunity">
+      <simpleType name="role">
+        <element name="personname" type="Yann Suty"/>
+        <element name="rolename" type="fondateur et rédacteur"/>
+        <element name="personname" type="Léon-Marc Levy"/>
+        <element name="rolename" type="directeur du magazine et rédacteur en chef"/>
+        <element name="personname" type="Philippe Chauché"/>
+        <element name="rolename" type="directeur adjoint"/>
+        <element name="personname" type="Cyrille Godefroy"/>
+        <element name="rolename" type="rédacteur en chef adjoint"/>
+      </simpleType>
+
+      <simpleType name="publication">
+        <element name="name" type="dossiers, études, entretiens, chroniques, critiques, recensions, créations littéraires"/>
+        <element name="publicationtype" type="html"/>
+      </simpleType>
+
+      <simpleType name="manifestation">
+        <element name="name" type="string"/>
+        <element name="date" type="string"/>
+        <element name="responsible" type="string"/>
+        <element name="location" type="string"/>
+      </simpleType>
+  </complexType>
+
+
+  <complexType name="link">
+    <attribute name="link0" type="string"/>
+
+    <attribute name="link1" type="string"/>
+
+    <attribute name="link2" type="string"/>
+
+    <attribute name="link3" type="string"/>
+  </complexType>
+</schema>

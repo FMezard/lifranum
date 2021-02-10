@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+        targetNamespace="http://www.example.org/LIFRANUMidentification"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tns="http://www.example.org/LIFRANUMidentification"
+        xmlns:ns="http://www.w3.org/2001/XMLSchema"
+        xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty">
+  <element name="collection" type="string"/>
+
+    <complexType name="network">
+    	<attribute name="description">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="personal/communautary"></enumeration>
+    				
+    				<enumeration value="personal/personal"></enumeration>
+    				
+    				<minLength value="0"></minLength>
+    				<maxLength value="1"></maxLength>
+    				<enumeration value="value"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="facet">
+    	<complexContent>
+    		<extension base="tns:network">
+    			<sequence>
+    				<element name="webunit" type="http://patrimages.over-blog.com/"></element>
+    			</sequence>
+    			<attribute name="provenance" type="http://www.fut-il.net/"></attribute>
+
+    			<attribute name="link0" type="string"></attribute>
+
+    			<attribute name="link1" type="https://www.alcoves.org/"></attribute>
+    			<attribute name="link1" type="http://www.quelquesraresqualites.fr/accueil/index.html"></attribute>
+    			<attribute name="link1" type="http://jean.dif.free.fr/"></attribute>
+
+    			<attribute name="link2" type="https://larencore.blogspot.com/"></attribute>
+    			<attribute name="link2" type="https://poesie.webnet.fr/vospoemes/Poemes/patricia_laranco"></attribute>
+    			<attribute name="link2" type="http://www.francopolis.net/salon/Laranco-Salonoctobre2011.html"></attribute>
+    			<attribute name="link2" type="https://www.facebook.com/patricia.laranco.poete/"></attribute>
+    			<attribute name="link2" type="https://www.facebook.com/P-Laranco-1470172676623886/"></attribute>
+    			<attribute name="link2" type="https://www.lechasseurabstrait.com/revue/spip.php?rubrique826"></attribute>
+    			<attribute name="link2" type="http://www.mytexte.com/textes.php?auteur=Patricia+Laranco"></attribute>
+    			<attribute name="link2" type="https://www.potomitan.info/moris/barre9a.php"></attribute>
+    			<attribute name="link2" type="https://fr.calameo.com/read/0031795637bdefbcf0f94"></attribute>
+   			<attribute name="link2" type="https://www.yumpu.com/fr/document/read/16713722/1-jerome-poirier"></attribute>
+   			<attribute name="link2" type="http://africultures.com/vagabondages-suivi-de-bleu-8278/"></attribute>
+
+    			<attribute name="link3" type="string"></attribute>
+
+    			<attribute name="authorproject" type="hexBinary"></attribute>
+
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>
