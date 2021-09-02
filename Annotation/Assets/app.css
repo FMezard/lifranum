@@ -1,0 +1,107 @@
+*
+{
+    font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+}
+
+h2
+
+{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+
+h3
+
+{
+ text-align: right;
+ font-size: 2em;
+}
+
+div
+{
+    padding : 10px;
+}
+
+#table_blogs.H2
+{
+
+
+}
+
+
+#post_content
+{
+    background-color: #0278A0;
+    color: white;
+    border-radius: 10px;
+    margin: 10%;
+    padding: 3%;
+}
+
+
+.column-1
+{
+    text-align: left;
+    width: 20%
+}
+
+.categorie
+{
+    color : #17a2b8;
+    font-weight : bold
+}
+
+.menu
+{
+background-color :  #dce2e2;
+}
+
+
+
+div
+{
+margin : 0%;
+padding : 0%;
+}
+
+#content
+{
+padding : 10%;
+padding-top : 4%
+}
+
+.container
+{
+max-width : 100%
+}
+
+.col
+
+{
+display: flex;
+align-items: center;
+}
+
+#button_authors, #button_blogs, #button_posts
+{
+padding: 2px;
+border: dotted;
+margin: 2px;
+text-align: center;
+border-block-color: #0178a0;
+color: #0178a0;
+border-radius: 5%;
+}
+
+.logo
+
+{
+    margin : 2%;
+}
